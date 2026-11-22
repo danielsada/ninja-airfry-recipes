@@ -1,0 +1,16 @@
+{{- /* Site override of the theme's panel-projects.html: the slot right below Places in the panel (this site doesn't use
+  the theme's Projects box). Renders this site's own pages ([[menus.app]]) as a second Places-style section, so
+  Places itself can stay identical to danielsada.tech. Title: params.panel.app.title. Context dict: page, isPost. */ -}}
+{{- $p := .page -}}
+{{- with site.Menus.app }}
+{{- $cfg := (site.Params.panel | default (dict)).app | default (dict) }}
+<nav class="appnav" aria-labelledby="app-h">
+  <h2 class="ph" id="app-h">{{ $cfg.title | default site.Title }}</h2>
+  <ul class="nav">
+  {{- range . }}
+    {{- $cur := or ($p.IsMenuCurrent "app" .) (and .Page (eq .Page.RelPermalink $p.RelPermalink)) }}
+    <li><a href="{{ .URL }}"{{ if $cur }} aria-current="page"{{ end }}>{{ partial "breeze/icon.html" (.Params.icon | default "folder") }}{{ .Name }}</a></li>
+  {{- end }}
+  </ul>
+</nav>
+{{- end }}

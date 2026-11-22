@@ -1,0 +1,6 @@
+{{- /* Site hook (theme: layouts/_partials/hooks/body-end.html): the charts filter and meal builder script,
+  only on the pages that use them. */ -}}
+{{- if in (slice "charts" "builder") .Params.view }}
+{{- $js := resources.Get "js/speedi.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- end }}

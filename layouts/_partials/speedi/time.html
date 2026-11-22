@@ -1,0 +1,8 @@
+{{- /* "15–20 min" / "6–8 hr" from an item with time_min, optional time_max and time_unit ("min" | "hr"). Returns a string. */ -}}
+{{- $s := "" -}}
+{{- with .time_min -}}
+  {{- $s = printf "%v" . -}}
+  {{- with $.time_max }}{{ if ne . $.time_min }}{{ $s = printf "%s–%v" $s . }}{{ end }}{{ end -}}
+  {{- $s = printf "%s %s" $s ($.time_unit | default "min") -}}
+{{- end -}}
+{{- return $s -}}

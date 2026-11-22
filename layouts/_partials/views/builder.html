@@ -1,0 +1,68 @@
+{{- /* Speedi Meal builder (front matter params.view = "builder"): data/speedi.json "meals".
+  The options are rendered here; assets/js/speedi.js reads the same data (embedded as JSON) and writes the steps. */ -}}
+{{- $m := hugo.Data.speedi.meals -}}
+<section class="win builder" aria-labelledby="builder-h" data-builder>
+  <header class="win__bar">
+    {{ partial "breeze/icon.html" (.Params.icon | default "pot") }}
+    <h1 id="builder-h">{{ .Title }}</h1>
+    <p class="win__sub">Speedi Meals · Rapid Cooker</p>
+  </header>
+  <div class="win__loc">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="{{ site.Home.RelPermalink }}">{{ site.Params.crumbroot | default site.Title }}</a></li><li><a href="{{ .RelPermalink }}" aria-current="page">{{ .Title }}</a></li></ol></nav>
+  </div>
+  {{- with .Content }}
+  <div class="win__intro">{{ . }}</div>
+  {{- end }}
+  <div class="bld">
+    <form class="bld__form" id="meal-form" aria-label="Choose your meal">
+      <div class="field">
+        <label class="ph" for="meal-base">Base (bottom of the pot)</label>
+        <select id="meal-base" name="base">
+          {{- range $m.bases }}<option value="{{ .id }}">{{ .name }}</option>{{ end }}
+        </select>
+      </div>
+      <div class="field">
+        <label class="ph" for="meal-protein">Protein (Crisper Tray, elevated)</label>
+        <select id="meal-protein" name="protein">
+          {{- range $m.proteins }}<option value="{{ .id }}">{{ .name }}</option>{{ end }}
+        </select>
+      </div>
+      <fieldset class="field">
+        <legend class="ph">Vegetables (optional)</legend>
+        <div class="chips">
+          {{- range $m.vegetables }}
+          <label class="chip"><input type="checkbox" name="veg" value="{{ .id }}"><span>{{ .name }}</span></label>
+          {{- end }}
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend class="ph">Vegetables go</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="vegat" value="base" checked><span>In the base (tender)</span></label>
+          <label class="chip"><input type="radio" name="vegat" value="tray"><span>On the tray (crisper)</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend class="ph">Servings</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="serves" value="full" checked><span>3–4</span></label>
+          <label class="chip"><input type="radio" name="serves" value="half"><span>1–2</span></label>
+        </div>
+      </fieldset>      {{- with $m.examples }}
+      <div class="field">
+        <p class="ph" id="meal-ex-h">Or start from</p>
+        <ul class="golinks" aria-labelledby="meal-ex-h">
+          {{- range . }}
+          <li><a class="go" href="?{{ printf "base=%s&protein=%s&veg=%s" .base .protein (delimit (.veg | default slice) ",") | safeURL }}" data-preset>{{ .name }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+    </form>
+    <div class="bld__out" id="meal-out" aria-live="polite">
+      <noscript><p>The builder needs JavaScript. The same numbers are in the <a href="{{ relref . "/charts" }}">cook charts</a>.</p></noscript>
+    </div>
+  </div>
+  <footer class="win__status"><span>Times are guides. Check proteins with a thermometer.</span><a class="r" href="{{ relref . "/charts" }}">Cook charts →</a></footer>
+  <script type="application/json" id="meal-data">{{ $m | jsonify | safeJS }}</script>
+</section>

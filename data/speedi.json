@@ -1,216 +1,2204 @@
 {
-    "air_roast": {
-        "chicken_breast": {
-            "amount": "1 piece",
-            "temperature": 400,
-            "time_to_cook": {
-                "range_minutes_start": 1080,
-                "range_minutes_end": 1320
-            },
-            "cook_time_per_unit": 240
-        },
-        "salmon": {
-            "amount": "1 fillet",
-            "temperature": 375,
-            "time_to_cook": {
-                "range_minutes_start": 720,
-                "range_minutes_end": 900
-            },
-            "cook_time_per_unit": 150
-        },
-        "vegetables": {
-            "amount": "1 cup",
-            "temperature": 400,
-            "time_to_cook": {
-                "range_minutes_start": 900,
-                "range_minutes_end": 1200
-            },
-            "cook_time_per_unit": 180
-        }
+  "sources": [
+    {
+      "id": "us_qsg",
+      "title": "Ninja Speedi Rapid Cooker & Air Fryer Quick Start Guide & Recipe Book (SF300 series, US/Canada)",
+      "url": "https://cdn.cs.1worldsync.com/e0/13/e01348bc-4159-462d-8a63-c492b33d1457.pdf",
+      "region": "US"
     },
-    "bake": {
-        "muffins": {
-            "amount": "1 muffin",
-            "temperature": 350,
-            "time_to_cook": {
-                "range_minutes_start": 720,
-                "range_minutes_end": 900
-            },
-            "cook_time_per_unit": 90
-        },
-        "cookies": {
-            "amount": "1 cookie",
-            "temperature": 350,
-            "time_to_cook": {
-                "range_minutes_start": 600,
-                "range_minutes_end": 720
-            },
-            "cook_time_per_unit": 45
-        },
-        "bread": {
-            "amount": "1 loaf",
-            "temperature": 375,
-            "time_to_cook": {
-                "range_minutes_start": 1500,
-                "range_minutes_end": 1800
-            },
-            "cook_time_per_unit": 240
-        }
+    {
+      "id": "uk_qsg",
+      "title": "Ninja Speedi Quick Start Guide (UK edition): pasta and potato bases, converted to US units",
+      "url": "https://www.manualslib.com/manual/3590716/Ninja-Speedi.html?page=6",
+      "region": "UK"
     },
-    "steam_and_crisp": {
-        "potatoes_russet": {
-            "amount": "4 potatoes",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 2100,
-                "range_minutes_end": 2520
-            },
-            "cook_time_per_unit": 420,
-            "oil": "1 tbsp",
-            "water": "1/4 cup",
-            "orientation": "whole, pierced"
-        },
-        "sweet_potatoes": {
-            "amount": "2 lbs",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 1800,
-                "range_minutes_end": 2280
-            },
-            "cook_time_per_unit": 300,
-            "oil": "1 tbsp",
-            "water": "1/4 cup",
-            "orientation": "whole, pierced"
-        },
-        "spaghetti_squash": {
-            "amount": "2 lbs",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 2100,
-                "range_minutes_end": 2400
-            },
-            "cook_time_per_unit": 300,
-            "oil": "1 tbsp",
-            "water": "1/4 cup",
-            "orientation": "cut in half, seeded"
-        },
-        "winter_squash": {
-            "amount": "2 lbs",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 2100,
-                "range_minutes_end": 2400
-            },
-            "cook_time_per_unit": 300,
-            "oil": "1 tbsp",
-            "water": "1/4 cup",
-            "orientation": "cut in half, seeded"
-        },
-        "brussels_sprouts": {
-            "amount": "2 lbs",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 1800,
-                "range_minutes_end": 2100
-            },
-            "cook_time_per_unit": 300,
-            "oil": "1 tbsp",
-            "water": "1/4 cup",
-            "orientation": "whole"
-        },
-        "carrots": {
-            "amount": "2 lbs",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 1800,
-                "range_minutes_end": 2100
-            },
-            "cook_time_per_unit": 300,
-            "oil": "1 tbsp",
-            "water": "1/4 cup",
-            "orientation": "whole"
-        },
-        "broccoli": {
-            "amount": "2 lbs",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 1500,
-                "range_minutes_end": 1800
-            },
-            "cook_time_per_unit": 300,
-            "oil": "1 tbsp",
-            "water": "1/4 cup",
-            "orientation": "cut in florets"
-        },
-        "cauliflower": {
-            "amount": "2 lbs",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 1500,
-                "range_minutes_end": 1800
-            },
-            "cook_time_per_unit": 300,
-            "oil": "1 tbsp",
-            "water": "1/4 cup",
-            "orientation": "cut in florets"
-        }
-    },
-    "grill": {
-        "steak": {
-            "amount": "1 steak",
-            "temperature": 450,
-            "time_to_cook": {
-                "range_minutes_start": 480,
-                "range_minutes_end": 720
-            },
-            "cook_time_per_unit": 150
-        },
-        "pork_chops": {
-            "amount": "1 chop",
-            "temperature": 400,
-            "time_to_cook": {
-                "range_minutes_start": 600,
-                "range_minutes_end": 900
-            },
-            "cook_time_per_unit": 150
-        },
-        "shrimp": {
-            "amount": "1 shrimp",
-            "temperature": 400,
-            "time_to_cook": {
-                "range_minutes_start": 300,
-                "range_minutes_end": 420
-            },
-            "cook_time_per_unit": 45
-        }
-    },
-    "air_fry": {
-        "french_fries": {
-            "amount": "1 cup",
-            "temperature": 400,
-            "time_to_cook": {
-                "range_minutes_start": 1080,
-                "range_minutes_end": 1320
-            },
-            "cook_time_per_unit": 150
-        },
-        "chicken_wings": {
-            "amount": "1 wing",
-            "temperature": 400,
-            "time_to_cook": {
-                "range_minutes_start": 1440,
-                "range_minutes_end": 1680
-            },
-            "cook_time_per_unit": 210
-        },
-        "onion_rings": {
-            "amount": "1 ring",
-            "temperature": 400,
-            "time_to_cook": {
-                "range_minutes_start": 720,
-                "range_minutes_end": 900
-            },
-            "cook_time_per_unit": 90
-        }
+    {
+      "id": "usda",
+      "title": "USDA safe minimum internal temperatures",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+      "region": "US"
     }
+  ],
+  "modes": [
+    {
+      "id": "steam-crisp",
+      "name": "Steam & Crisp",
+      "icon": "steam",
+      "note": "Rapid Cooker. Water in the pot first; it steams for about 4–8 minutes before the timer counts down, then crisps.",
+      "items": [
+        {
+          "name": "Acorn squash",
+          "category": "vegetables",
+          "amount": "1",
+          "prep": "Cut in half, placed face down",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 390,
+          "time_min": 15,
+          "tips": [
+            "Shake or flip after 10 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Beets",
+          "category": "vegetables",
+          "amount": "2 1/2 lbs",
+          "prep": "Cut in 1-in pieces",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 30,
+          "time_max": 35,
+          "tips": [
+            "Shake or flip after 10 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Broccoli",
+          "category": "vegetables",
+          "amount": "1 head",
+          "prep": "Whole, stem removed",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 10,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Brussels sprouts",
+          "category": "vegetables",
+          "amount": "2 lbs",
+          "prep": "Cut in half, ends trimmed",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 450,
+          "time_min": 15,
+          "time_max": 20,
+          "tips": [
+            "Shake or flip after 15 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Carrots",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Cut in 1-in pieces",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 20,
+          "time_max": 25,
+          "tips": [
+            "Shake or flip after 10 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Cauliflower",
+          "category": "vegetables",
+          "amount": "1 head",
+          "prep": "Whole, stems removed",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 425,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Parsnip",
+          "category": "vegetables",
+          "amount": "2 1/2 lbs",
+          "prep": "Cut in 1-in pieces",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 30,
+          "time_max": 35,
+          "tips": [
+            "Shake or flip after 20 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (wedges)",
+          "category": "vegetables",
+          "amount": "2 lbs",
+          "prep": "Cut in 1-in wedges",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 450,
+          "time_min": 25,
+          "time_max": 30,
+          "tips": [
+            "Shake or flip after 20 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (hand-cut fries)",
+          "category": "vegetables",
+          "amount": "2 lbs",
+          "prep": "Hand-cut fries, soaked 30 mins in cold water then patted dry",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 450,
+          "time_min": 30,
+          "time_max": 35,
+          "tips": [
+            "Shake or flip after 25 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (whole, medium)",
+          "category": "vegetables",
+          "amount": "4",
+          "prep": "Whole, poked several times with a fork",
+          "liquid": "1 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 30,
+          "time_max": 35,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (whole, large)",
+          "category": "vegetables",
+          "amount": "4",
+          "prep": "Whole, poked several times with a fork",
+          "liquid": "1 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 40,
+          "time_max": 48,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (cut)",
+          "category": "vegetables",
+          "amount": "2 1/2 lbs",
+          "prep": "Cut in 1-in pieces",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 450,
+          "time_min": 30,
+          "time_max": 35,
+          "tips": [
+            "Shake or flip after 20 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Spaghetti squash",
+          "category": "vegetables",
+          "amount": "1 small squash",
+          "prep": "Cut in half, deseeded, punctured with fork about 10 times",
+          "oil": "1 tbsp",
+          "liquid": "2 cups water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 375,
+          "time_min": 25,
+          "time_max": 30,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Sweet potatoes",
+          "category": "vegetables",
+          "amount": "2 1/2 lbs",
+          "prep": "Cut in 1-in pieces",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 450,
+          "time_min": 20,
+          "time_max": 25,
+          "tips": [
+            "Shake or flip after 10 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Whole chicken",
+          "category": "poultry",
+          "amount": "4 1/2–5 lbs",
+          "prep": "Trussed; brush with oil",
+          "liquid": "1 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 40,
+          "time_max": 50,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Turkey drumsticks",
+          "category": "poultry",
+          "amount": "2 lbs",
+          "prep": "brush with oil",
+          "liquid": "1 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 32,
+          "time_max": 38,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Turkey breast",
+          "category": "poultry",
+          "amount": "1 (3–5 lbs)",
+          "prep": "brush with oil",
+          "liquid": "1 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 365,
+          "time_min": 45,
+          "time_max": 55,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken breasts (boneless)",
+          "category": "poultry",
+          "amount": "4 breasts, 6–8 oz each",
+          "prep": "Brush with oil",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 390,
+          "time_min": 15,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken breasts (bone in, skin on)",
+          "category": "poultry",
+          "amount": "4 breasts, 3/4–1 1/2 lbs each",
+          "prep": "Brush with oil",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 375,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken thighs (bone in)",
+          "category": "poultry",
+          "amount": "4 thighs, 6–10 oz each",
+          "prep": "Brush with oil",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 400,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken thighs (boneless)",
+          "category": "poultry",
+          "amount": "6 thighs, 4–8 oz each",
+          "prep": "Brush with oil",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 375,
+          "time_min": 15,
+          "time_max": 18,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken drumsticks",
+          "category": "poultry",
+          "amount": "2 lbs",
+          "prep": "Brush with oil",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 425,
+          "time_min": 20,
+          "time_max": 25,
+          "tips": [
+            "Shake or flip after 15 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Hand-breaded chicken breasts",
+          "category": "poultry",
+          "amount": "4 breasts, 6 oz each",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 385,
+          "time_min": 18,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken wings",
+          "category": "poultry",
+          "amount": "2 lbs",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 450,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork tenderloins",
+          "category": "pork",
+          "amount": "2 (1 lb each)",
+          "oil": "2 tbsp",
+          "liquid": "1 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 375,
+          "time_min": 25,
+          "time_max": 30,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork loin",
+          "category": "pork",
+          "amount": "1 (2 lbs)",
+          "oil": "2 tbsp",
+          "liquid": "1 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 365,
+          "time_min": 35,
+          "time_max": 40,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Spiral ham, bone in",
+          "category": "pork",
+          "amount": "1 (3 lbs)",
+          "oil": "2 tbsp",
+          "liquid": "1 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 325,
+          "time_min": 45,
+          "time_max": 50,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork chops, boneless",
+          "category": "pork",
+          "amount": "4 chops, 6–8 oz each",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 375,
+          "time_min": 15,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork chops (bone in, thick cut)",
+          "category": "pork",
+          "amount": "2 chops, 10–12 oz each",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 375,
+          "time_min": 25,
+          "time_max": 30,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Cod",
+          "category": "seafood",
+          "amount": "4 fillets, 6 oz each",
+          "oil": "1 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 450,
+          "time_min": 9,
+          "time_max": 12,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Salmon",
+          "category": "seafood",
+          "amount": "4 fillets, 6 oz each",
+          "oil": "1 tbsp",
+          "liquid": "1/4 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 450,
+          "time_min": 7,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Scallops",
+          "category": "seafood",
+          "amount": "1 lb (approx. 21 pieces)",
+          "oil": "1 tbsp",
+          "liquid": "1/4 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 400,
+          "time_min": 4,
+          "time_max": 6,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Roast beef",
+          "category": "beef",
+          "amount": "2–3 lbs",
+          "oil": "2 tbsp",
+          "liquid": "1 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 360,
+          "time_min": 45,
+          "tips": [
+            "Medium rare"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Beef tenderloin",
+          "category": "beef",
+          "amount": "2–3 lbs",
+          "oil": "2 tbsp",
+          "liquid": "1 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 365,
+          "time_min": 25,
+          "time_max": 30,
+          "tips": [
+            "Medium rare"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken breasts, boneless skinless (frozen)",
+          "category": "frozen",
+          "amount": "4 breasts, 4–6 oz each",
+          "prep": "As desired",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 390,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken thighs, boneless skinless (frozen)",
+          "category": "frozen",
+          "amount": "6 thighs, 4–8 oz each",
+          "prep": "As desired",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 375,
+          "time_min": 15,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken thighs, bone-in skin on (frozen)",
+          "category": "frozen",
+          "amount": "4 thighs, 8–10 oz each",
+          "prep": "As desired",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 400,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pre-breaded chicken breasts (frozen)",
+          "category": "frozen",
+          "amount": "3–4 breasts, 10–16 oz each",
+          "prep": "As desired",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 375,
+          "time_min": 10,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken wings (frozen)",
+          "category": "frozen",
+          "amount": "2 lbs",
+          "prep": "As desired",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 450,
+          "time_min": 25,
+          "time_max": 30,
+          "tips": [
+            "Shake or flip after 15 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "NY strip steak (frozen)",
+          "category": "frozen",
+          "amount": "2 steaks, 10–14 oz each",
+          "prep": "2 tbsp canola oil, salt, pepper",
+          "liquid": "3/4 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 22,
+          "time_max": 28,
+          "tips": [
+            "Shake or flip after 15 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Salmon (frozen)",
+          "category": "frozen",
+          "amount": "4 fillets, 6 oz each",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 450,
+          "time_min": 11,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Shrimp (frozen)",
+          "category": "frozen",
+          "amount": "18 shrimp, 1 lb",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 450,
+          "time_min": 2,
+          "time_max": 5,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Cod (frozen)",
+          "category": "frozen",
+          "amount": "4 fillets, 6 oz each",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 450,
+          "time_min": 10,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Lobster tails (frozen)",
+          "category": "frozen",
+          "amount": "4",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 450,
+          "time_min": 5,
+          "time_max": 7,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork tenderloins (frozen)",
+          "category": "frozen",
+          "amount": "2 (1 lb each)",
+          "oil": "2 tbsp",
+          "liquid": "1 1/2 cups water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 365,
+          "time_min": 30,
+          "time_max": 35,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork loin (frozen)",
+          "category": "frozen",
+          "amount": "1 (2 lbs)",
+          "oil": "2 tbsp",
+          "liquid": "None (as printed in the guide)",
+          "accessory": "Tray at the bottom",
+          "temp_f": 360,
+          "time_min": 37,
+          "time_max": 40,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork chops, boneless (frozen)",
+          "category": "frozen",
+          "amount": "4, 6–8 oz each",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 375,
+          "time_min": 15,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork chops, bone-in thick cut (frozen)",
+          "category": "frozen",
+          "amount": "2, 10–12 oz each",
+          "oil": "2 tbsp",
+          "liquid": "3/4 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 365,
+          "time_min": 23,
+          "time_max": 28,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Italian sausages (frozen)",
+          "category": "frozen",
+          "amount": "6 uncooked",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 375,
+          "time_min": 10,
+          "time_max": 12,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Dumplings / pot stickers (frozen)",
+          "category": "frozen",
+          "amount": "16 oz bag",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 400,
+          "time_min": 12,
+          "time_max": 16,
+          "tips": [
+            "Shake or flip after 8 min"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Ravioli (frozen)",
+          "category": "frozen",
+          "amount": "25 oz bag",
+          "oil": "2 tbsp",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 385,
+          "time_min": 12,
+          "time_max": 16,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Eggrolls (frozen)",
+          "category": "frozen",
+          "amount": "10 oz pkg",
+          "liquid": "1/2 cup water",
+          "accessory": "Tray at the bottom",
+          "temp_f": 375,
+          "time_min": 15,
+          "time_max": 20,
+          "source": "us_qsg"
+        }
+      ]
+    },
+    {
+      "id": "air-fry",
+      "name": "Air Fry",
+      "icon": "fan",
+      "note": "Air Fry/Stovetop. Crisper Tray at the bottom. Preheat 5 minutes (add it to the time), shake or flip often.",
+      "items": [
+        {
+          "name": "Asparagus",
+          "category": "vegetables",
+          "amount": "1 bunch",
+          "prep": "Cut in half, trim stems",
+          "oil": "2 tsp",
+          "temp_f": 390,
+          "time_min": 8,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Beets",
+          "category": "vegetables",
+          "amount": "6 small or 4 large (about 2 lbs)",
+          "prep": "Whole",
+          "temp_f": 390,
+          "time_min": 45,
+          "time_max": 60,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Bell peppers (for roasting)",
+          "category": "vegetables",
+          "amount": "4 peppers",
+          "prep": "Whole",
+          "temp_f": 400,
+          "time_min": 25,
+          "time_max": 30,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Broccoli",
+          "category": "vegetables",
+          "amount": "1 head",
+          "prep": "Cut in 1–2-inch florets",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 10,
+          "time_max": 13,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Brussels sprouts",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Cut in half, remove stems",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 15,
+          "time_max": 18,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Butternut squash",
+          "category": "vegetables",
+          "amount": "1–1 1/2 lbs",
+          "prep": "Cut in 1–2-inch pieces",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Carrots",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Peeled, cut in 1/2-inch pieces",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 14,
+          "time_max": 16,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Cauliflower",
+          "category": "vegetables",
+          "amount": "1 head",
+          "prep": "Cut in 1–2-inch florets",
+          "oil": "2 tbsp",
+          "temp_f": 390,
+          "time_min": 15,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Corn on the cob",
+          "category": "vegetables",
+          "amount": "4 ears, cut in half",
+          "prep": "Whole, remove husks",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 12,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Green beans",
+          "category": "vegetables",
+          "amount": "1 bag (12 oz)",
+          "prep": "Trimmed",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 7,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Kale (for chips)",
+          "category": "vegetables",
+          "amount": "6 cups, packed",
+          "prep": "Tear in pieces, remove stems",
+          "temp_f": 300,
+          "time_min": 8,
+          "time_max": 11,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Mushrooms",
+          "category": "vegetables",
+          "amount": "8 oz",
+          "prep": "Rinse, cut in quarters",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 7,
+          "time_max": 8,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (wedges)",
+          "category": "vegetables",
+          "amount": "1 1/2 lbs",
+          "prep": "Cut in 1-inch wedges",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (fries, thin)",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Hand-cut fries, thin",
+          "oil": "1/2–3 tbsp canola",
+          "temp_f": 390,
+          "time_min": 20,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (fries, soaked)",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Hand-cut fries, soak 30 mins in cold water then pat dry",
+          "oil": "1/2–3 tbsp canola",
+          "temp_f": 390,
+          "time_min": 24,
+          "time_max": 27,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, russet (whole)",
+          "category": "vegetables",
+          "amount": "4 whole (6–8 oz)",
+          "prep": "Pierce with fork 3 times",
+          "temp_f": 390,
+          "time_min": 35,
+          "time_max": 40,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, sweet (chunks)",
+          "category": "vegetables",
+          "amount": "2 lbs",
+          "prep": "Cut in 1-inch chunks",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 15,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, sweet (whole)",
+          "category": "vegetables",
+          "amount": "4 whole (6–8 oz)",
+          "prep": "Pierce with fork 3 times",
+          "temp_f": 390,
+          "time_min": 35,
+          "time_max": 40,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Zucchini",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Cut in quarters lengthwise, then in 1-inch pieces",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 15,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken breasts, bone in",
+          "category": "poultry",
+          "amount": "2 breasts (3/4–1 1/2 lbs each)",
+          "prep": "Bone in; brush with oil",
+          "temp_f": 375,
+          "time_min": 25,
+          "time_max": 35,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken breasts, boneless",
+          "category": "poultry",
+          "amount": "2 breasts (1/2–3/4 lb each)",
+          "prep": "Boneless; brush with oil",
+          "temp_f": 375,
+          "time_min": 22,
+          "time_max": 25,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken thighs, bone in",
+          "category": "poultry",
+          "amount": "4 thighs (6–10 oz each)",
+          "prep": "Bone in; brush with oil",
+          "temp_f": 390,
+          "time_min": 22,
+          "time_max": 28,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken thighs, boneless",
+          "category": "poultry",
+          "amount": "4 thighs (4–8 oz each)",
+          "prep": "Boneless; brush with oil",
+          "temp_f": 390,
+          "time_min": 18,
+          "time_max": 22,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken wings",
+          "category": "poultry",
+          "amount": "2 lbs",
+          "prep": "Drumettes & flats",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 24,
+          "time_max": 28,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken, whole",
+          "category": "poultry",
+          "amount": "1 chicken (4–6 lbs)",
+          "prep": "Trussed; brush with oil",
+          "temp_f": 375,
+          "time_min": 55,
+          "time_max": 75,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken drumsticks",
+          "category": "poultry",
+          "amount": "2 lbs",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 20,
+          "time_max": 22,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Burgers",
+          "category": "beef",
+          "amount": "4 quarter-pound patties, 80% lean",
+          "prep": "1-inch thick",
+          "temp_f": 375,
+          "time_min": 10,
+          "time_max": 12,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Steaks",
+          "category": "beef",
+          "amount": "2 steaks (8 oz each)",
+          "prep": "Whole",
+          "temp_f": 390,
+          "time_min": 10,
+          "time_max": 20,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Bacon",
+          "category": "pork",
+          "amount": "1 strip to 1 (16 oz) package",
+          "prep": "Lay strips evenly over the plate",
+          "temp_f": 330,
+          "time_min": 13,
+          "time_max": 16,
+          "tips": [
+            "No preheat"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork chops, bone in, thick-cut",
+          "category": "pork",
+          "amount": "2 chops (10–12 oz each)",
+          "prep": "Bone in; brush with oil",
+          "temp_f": 375,
+          "time_min": 15,
+          "time_max": 17,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork chops, boneless",
+          "category": "pork",
+          "amount": "4 chops (6–8 oz each)",
+          "prep": "Boneless; brush with oil",
+          "temp_f": 375,
+          "time_min": 15,
+          "time_max": 18,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pork tenderloins",
+          "category": "pork",
+          "amount": "2 tenderloins (1–1 1/2 lbs each)",
+          "prep": "Whole; brush with oil",
+          "temp_f": 375,
+          "time_min": 25,
+          "time_max": 35,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Sausages",
+          "category": "pork",
+          "amount": "4 sausages",
+          "prep": "Whole",
+          "temp_f": 390,
+          "time_min": 8,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Crab cakes",
+          "category": "seafood",
+          "amount": "2 cakes (6–8 oz each)",
+          "prep": "brush with oil",
+          "temp_f": 350,
+          "time_min": 10,
+          "time_max": 13,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Lobster tails",
+          "category": "seafood",
+          "amount": "4 tails (3–4 oz each)",
+          "prep": "Whole",
+          "temp_f": 375,
+          "time_min": 7,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Salmon fillets",
+          "category": "seafood",
+          "amount": "2 fillets (4 oz each)",
+          "prep": "brush with oil",
+          "temp_f": 390,
+          "time_min": 10,
+          "time_max": 13,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Shrimp",
+          "category": "seafood",
+          "amount": "16 jumbo",
+          "prep": "Raw, whole, peel, keep tails on",
+          "oil": "1 tbsp",
+          "temp_f": 390,
+          "time_min": 7,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken nuggets",
+          "category": "frozen",
+          "amount": "1 box (12 oz)",
+          "temp_f": 390,
+          "time_min": 11,
+          "time_max": 13,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Fish fillets",
+          "category": "frozen",
+          "amount": "1 box (6 fillets)",
+          "temp_f": 390,
+          "time_min": 13,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Fish sticks",
+          "category": "frozen",
+          "amount": "1 box (14.8 oz)",
+          "temp_f": 390,
+          "time_min": 9,
+          "time_max": 11,
+          "source": "us_qsg"
+        },
+        {
+          "name": "French fries",
+          "category": "frozen",
+          "amount": "1 lb",
+          "temp_f": 360,
+          "time_min": 18,
+          "time_max": 22,
+          "source": "us_qsg"
+        },
+        {
+          "name": "French fries",
+          "category": "frozen",
+          "amount": "2 lbs",
+          "temp_f": 360,
+          "time_min": 28,
+          "time_max": 32,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Mozzarella sticks",
+          "category": "frozen",
+          "amount": "1 box (11 oz)",
+          "temp_f": 375,
+          "time_min": 6,
+          "time_max": 9,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pot stickers",
+          "category": "frozen",
+          "amount": "1 bag (10 count)",
+          "oil": "Toss with 1 tsp canola oil",
+          "temp_f": 390,
+          "time_min": 11,
+          "time_max": 14,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pizza rolls",
+          "category": "frozen",
+          "amount": "1 bag (20 oz, 40 count)",
+          "temp_f": 390,
+          "time_min": 12,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Popcorn shrimp",
+          "category": "frozen",
+          "amount": "1 box (16 oz)",
+          "temp_f": 390,
+          "time_min": 8,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Tater tots",
+          "category": "frozen",
+          "amount": "1 lb",
+          "temp_f": 360,
+          "time_min": 19,
+          "time_max": 22,
+          "source": "us_qsg"
+        }
+      ]
+    },
+    {
+      "id": "steam",
+      "name": "Steam",
+      "icon": "pot",
+      "note": "Rapid Cooker. Water in the pot, food on the Crisper Tray at the bottom. Steam has no temperature setting.",
+      "items": [
+        {
+          "name": "Artichokes",
+          "category": "vegetables",
+          "amount": "4",
+          "prep": "Whole",
+          "liquid": "3 cups water",
+          "setting": "Steam",
+          "time_min": 25,
+          "time_max": 42,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Asparagus",
+          "category": "vegetables",
+          "amount": "1 bunch",
+          "prep": "Whole spears",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 7,
+          "time_max": 12,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Broccoli",
+          "category": "vegetables",
+          "amount": "1 crown or 1 bag (12 oz) florets",
+          "prep": "Cut in florets",
+          "liquid": "1/2 cup water",
+          "setting": "Steam",
+          "time_min": 3,
+          "time_max": 8,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Brussels sprouts",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Whole, trimmed",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 10,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Butternut squash",
+          "category": "vegetables",
+          "amount": "24 oz",
+          "prep": "Peeled, cut in 1-inch cubes",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 10,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Cabbage",
+          "category": "vegetables",
+          "amount": "1 head",
+          "prep": "Cut in wedges",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 10,
+          "time_max": 12,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Carrots",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Peeled, cut in 1-inch pieces",
+          "liquid": "1 1/2 cups water",
+          "setting": "Steam",
+          "time_min": 10,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Cauliflower",
+          "category": "vegetables",
+          "amount": "1 head",
+          "prep": "Cut in florets",
+          "liquid": "1/2 cup water",
+          "setting": "Steam",
+          "time_min": 5,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Corn on the cob",
+          "category": "vegetables",
+          "amount": "4 ears",
+          "prep": "Whole, husks removed",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 4,
+          "time_max": 9,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Green beans",
+          "category": "vegetables",
+          "amount": "1 bag (12 oz)",
+          "prep": "Whole",
+          "liquid": "1/2 cup water",
+          "setting": "Steam",
+          "time_min": 5,
+          "time_max": 8,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Kale",
+          "category": "vegetables",
+          "amount": "1 bag (16 oz)",
+          "prep": "Trimmed",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 5,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Peeled, cut in 1-inch pieces",
+          "liquid": "1 1/2 cups water",
+          "setting": "Steam",
+          "time_min": 12,
+          "time_max": 17,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, new",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Whole",
+          "liquid": "1 1/2 cups water",
+          "setting": "Steam",
+          "time_min": 10,
+          "time_max": 15,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Potatoes, sweet",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Cut in 1/2-inch cubes",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 8,
+          "time_max": 14,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Spinach",
+          "category": "vegetables",
+          "amount": "1 bag (16 oz)",
+          "prep": "Whole leaves",
+          "liquid": "1/2 cup water",
+          "setting": "Steam",
+          "time_min": 3,
+          "time_max": 5,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Sugar snap peas",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Whole pods, trimmed",
+          "liquid": "1/2 cup water",
+          "setting": "Steam",
+          "time_min": 5,
+          "time_max": 8,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Summer squash",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Cut in 1-inch slices",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 5,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Zucchini",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Cut in 1-inch slices",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 5,
+          "time_max": 10,
+          "source": "us_qsg"
+        },
+        {
+          "name": "Poached eggs",
+          "category": "eggs",
+          "amount": "4",
+          "prep": "In ramekins or silicone cups",
+          "liquid": "1 cup water",
+          "setting": "Steam",
+          "time_min": 3,
+          "time_max": 6,
+          "source": "us_qsg"
+        }
+      ]
+    },
+    {
+      "id": "steam-bake",
+      "name": "Steam & Bake",
+      "icon": "cake",
+      "note": "Rapid Cooker. From the recipes in the quick start guide (it has no Steam & Bake chart). The unit steams first, then bakes.",
+      "items": [
+        {
+          "name": "Frittata Lorraine",
+          "category": "baked",
+          "amount": "6 eggs, 8-in round pan",
+          "liquid": "1 cup water",
+          "accessory": "Tray at the bottom; Ninja multi-purpose pan or 8-in round pan",
+          "temp_f": 350,
+          "time_min": 10,
+          "tips": [
+            "Steams about 20 min first"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Everyday Birthday Cake",
+          "category": "baked",
+          "amount": "box mix, 8-in round pan",
+          "liquid": "2 cups water",
+          "accessory": "Tray at the bottom; Ninja multi-purpose pan or 8-in round pan",
+          "temp_f": 315,
+          "time_min": 17,
+          "tips": [
+            "Steams about 20 min first"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Double Chocolate Chunk Banana Bread",
+          "category": "baked",
+          "amount": "box mix, 8x4 loaf pan",
+          "liquid": "3 cups water",
+          "accessory": "Tray at the bottom; 8x4 in loaf pan",
+          "temp_f": 315,
+          "time_min": 20,
+          "tips": [
+            "Steams about 25 min first"
+          ],
+          "source": "us_qsg"
+        },
+        {
+          "name": "Cookies & Cream Cheesecake Pie",
+          "category": "baked",
+          "amount": "9-in crust",
+          "liquid": "1 cup water",
+          "accessory": "Tray elevated",
+          "temp_f": 300,
+          "time_min": 5,
+          "tips": [
+            "Steams about 20 min first"
+          ],
+          "source": "us_qsg"
+        }
+      ]
+    },
+    {
+      "id": "dehydrate",
+      "name": "Dehydrate",
+      "icon": "sun",
+      "note": "Air Fry/Stovetop. Crisper Tray at the bottom, food in a single layer.",
+      "items": [
+        {
+          "name": "Apple chips",
+          "category": "fruit & veg",
+          "prep": "Cut in 1/8-inch slices (remove core), rinse in lemon water, pat dry",
+          "temp_f": 135,
+          "time_min": 7,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Asparagus",
+          "category": "fruit & veg",
+          "prep": "Cut in 1-inch pieces, blanch",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Bananas",
+          "category": "fruit & veg",
+          "prep": "Peel, cut in 3/8-inch slices",
+          "temp_f": 135,
+          "time_min": 8,
+          "time_max": 10,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Beet chips",
+          "category": "fruit & veg",
+          "prep": "Peel, cut in 1/8-inch slices",
+          "temp_f": 135,
+          "time_min": 7,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Eggplant",
+          "category": "fruit & veg",
+          "prep": "Peel, cut in 1/4-inch slices, blanch",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Fresh herbs",
+          "category": "fruit & veg",
+          "prep": "Rinse, pat dry, remove stems",
+          "temp_f": 135,
+          "time_min": 4,
+          "time_max": 6,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Ginger root",
+          "category": "fruit & veg",
+          "prep": "Cut in 3/8-inch slices",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_max": 6,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Mangoes",
+          "category": "fruit & veg",
+          "prep": "Peel, cut in 3/8-inch slices, remove pits",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Mushrooms",
+          "category": "fruit & veg",
+          "prep": "Clean with soft brush (do not wash)",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Pineapple",
+          "category": "fruit & veg",
+          "prep": "Peel, cut in 3/8–1/2-inch slices, core removed",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Strawberries",
+          "category": "fruit & veg",
+          "prep": "Cut in half or in 1/2-inch slices",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Tomatoes",
+          "category": "fruit & veg",
+          "prep": "Cut in 3/8-inch slices or grate; steam if planning to rehydrate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Beef jerky",
+          "category": "jerky",
+          "prep": "Cut in 1/4-inch slices, marinate overnight",
+          "temp_f": 150,
+          "time_min": 5,
+          "time_max": 7,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Chicken jerky",
+          "category": "jerky",
+          "prep": "Cut in 1/4-inch slices, marinate overnight",
+          "temp_f": 150,
+          "time_min": 5,
+          "time_max": 7,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Turkey jerky",
+          "category": "jerky",
+          "prep": "Cut in 1/4-inch slices, marinate overnight",
+          "temp_f": 150,
+          "time_min": 5,
+          "time_max": 7,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        },
+        {
+          "name": "Salmon jerky",
+          "category": "jerky",
+          "prep": "Cut in 1/4-inch slices, marinate overnight",
+          "temp_f": 165,
+          "time_min": 5,
+          "time_max": 8,
+          "time_unit": "hr",
+          "source": "us_qsg"
+        }
+      ]
+    }
+  ],
+  "meals": {
+    "temp_default_f": 390,
+    "time_min": 10,
+    "time_max": 15,
+    "oil": "1–2 tbsp oil",
+    "notes": [
+      "Serves 3–4. For 1–2, halve the base, vegetables and protein, keep the same temperature and time, and cover the tray with foil to protect the base.",
+      "Times are for well-done proteins. Thicker cuts need 3–5 minutes more, which may overcook the grains.",
+      "If the base still needs time, switch to Sear/Sauté with the lid open until the liquid is absorbed."
+    ],
+    "bases": [
+      {
+        "id": "white-rice",
+        "name": "White rice",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "white rice",
+          "prep": "rinsed"
+        },
+        "liquid": [
+          {
+            "qty": 2,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water or stock"
+          }
+        ],
+        "steam": "about 10",
+        "rice": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "instant-brown-rice",
+        "name": "Instant brown rice",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "instant brown rice",
+          "prep": "no need to rinse"
+        },
+        "liquid": [
+          {
+            "qty": 2,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water or stock"
+          }
+        ],
+        "steam": "about 10",
+        "rice": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "quinoa",
+        "name": "Quinoa",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "quinoa",
+          "prep": "rinsed"
+        },
+        "liquid": [
+          {
+            "qty": 1.5,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water or stock"
+          }
+        ],
+        "steam": "about 10",
+        "rice": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "risotto",
+        "name": "Risotto (Arborio rice)",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "Arborio rice"
+        },
+        "liquid": [
+          {
+            "qty": 4,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water or stock"
+          }
+        ],
+        "source": "us_qsg"
+      },
+      {
+        "id": "lentils",
+        "name": "Lentils",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "lentils"
+        },
+        "liquid": [
+          {
+            "qty": 1.75,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water or stock"
+          }
+        ],
+        "source": "us_qsg"
+      },
+      {
+        "id": "riced-cauliflower",
+        "name": "Riced cauliflower (frozen)",
+        "amount": {
+          "qty": 2,
+          "unit": "bag (10 oz)",
+          "units": "bags (10 oz each)",
+          "what": "frozen riced cauliflower"
+        },
+        "liquid": [],
+        "steam": "about 15",
+        "note": "No liquid: the frozen cauliflower makes its own.",
+        "source": "us_qsg"
+      },
+      {
+        "id": "mac-cheese",
+        "name": "Boxed mac & cheese",
+        "amount": {
+          "qty": 1,
+          "unit": "box (7 1/4 oz)",
+          "units": "boxes (7 1/4 oz each)",
+          "what": "macaroni & cheese"
+        },
+        "liquid": [
+          {
+            "qty": 2,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water"
+          }
+        ],
+        "steam": "about 15",
+        "pasta": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "boxed-rice",
+        "name": "Boxed rice (pilaf, Spanish, rice & beans)",
+        "amount": {
+          "qty": 1,
+          "unit": "box",
+          "units": "boxes",
+          "what": "rice mix"
+        },
+        "liquid": [],
+        "liquid_text": "the water and seasoning on the box",
+        "source": "us_qsg"
+      },
+      {
+        "id": "pasta-alfredo",
+        "name": "Pasta with Alfredo sauce",
+        "amount": {
+          "qty": 8,
+          "unit": "oz",
+          "units": "oz",
+          "what": "ziti or fettuccine"
+        },
+        "liquid": [
+          {
+            "qty": 1,
+            "unit": "jar (15 oz)",
+            "units": "jars (15 oz each)",
+            "what": "Alfredo sauce"
+          },
+          {
+            "qty": 2,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water or stock"
+          }
+        ],
+        "steam": "about 10",
+        "pasta": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "pasta",
+        "name": "Plain pasta",
+        "amount": {
+          "qty": 8,
+          "unit": "oz",
+          "units": "oz",
+          "what": "pasta (white, whole wheat or gluten-free)"
+        },
+        "liquid": [
+          {
+            "qty": 3,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water or stock"
+          },
+          {
+            "qty": 2,
+            "unit": "tbsp",
+            "units": "tbsp",
+            "what": "oil"
+          }
+        ],
+        "steam": "10–15",
+        "pasta": true,
+        "source": "uk_qsg"
+      },
+      {
+        "id": "pasta-tomato",
+        "name": "Pasta with tomato sauce",
+        "amount": {
+          "qty": 8,
+          "unit": "oz",
+          "units": "oz",
+          "what": "pasta"
+        },
+        "liquid": [
+          {
+            "qty": 2,
+            "unit": "cup",
+            "units": "cups",
+            "what": "pasta sauce"
+          },
+          {
+            "qty": 2,
+            "unit": "cup",
+            "units": "cups",
+            "what": "water or stock"
+          }
+        ],
+        "steam": "10–15",
+        "pasta": true,
+        "source": "uk_qsg"
+      },
+      {
+        "id": "potatoes",
+        "name": "Potatoes",
+        "amount": {
+          "qty": 1,
+          "unit": "lb",
+          "units": "lb",
+          "what": "potatoes",
+          "prep": "cut in 1 1/2-inch chunks"
+        },
+        "liquid": [
+          {
+            "qty": 1,
+            "unit": "cup",
+            "units": "cups",
+            "what": "cold water"
+          }
+        ],
+        "source": "uk_qsg"
+      }
+    ],
+    "proteins": [
+      {
+        "id": "chicken-breast",
+        "name": "Chicken breasts",
+        "amount": {
+          "qty": 4,
+          "unit": "chicken breast",
+          "units": "chicken breasts",
+          "detail": "boneless skinless, 5–6 oz each, 1 1/2–2 in thick"
+        },
+        "prep": "season",
+        "temp_f": 390,
+        "done_f": 165,
+        "source": "us_qsg"
+      },
+      {
+        "id": "chicken-breast-breaded",
+        "name": "Chicken breasts, breaded",
+        "amount": {
+          "qty": 4,
+          "unit": "chicken breast",
+          "units": "chicken breasts",
+          "detail": "boneless skinless, 5–6 oz each, breaded"
+        },
+        "temp_f": 375,
+        "done_f": 165,
+        "source": "us_qsg"
+      },
+      {
+        "id": "chicken-thigh",
+        "name": "Chicken thighs",
+        "amount": {
+          "qty": 4,
+          "unit": "chicken thigh",
+          "units": "chicken thighs",
+          "detail": "boneless, skin on, 5–6 oz each"
+        },
+        "prep": "season",
+        "temp_f": 390,
+        "done_f": 165,
+        "source": "us_qsg"
+      },
+      {
+        "id": "steak-tips",
+        "name": "Steak tips",
+        "amount": {
+          "qty": 2,
+          "unit": "lb",
+          "units": "lb",
+          "what": "steak tips",
+          "prep": "marinated"
+        },
+        "temp_f": 350,
+        "done_f": 145,
+        "source": "us_qsg"
+      },
+      {
+        "id": "meatballs",
+        "name": "Meatballs (or plant-based)",
+        "amount": {
+          "qty": 12,
+          "unit": "meatball",
+          "units": "meatballs",
+          "detail": "about 2 oz each"
+        },
+        "temp_f": 350,
+        "done_f": 165,
+        "source": "us_qsg"
+      },
+      {
+        "id": "pork-chops",
+        "name": "Pork chops",
+        "amount": {
+          "qty": 4,
+          "unit": "pork chop",
+          "units": "pork chops",
+          "detail": "boneless, 1 in thick or less, 5–6 oz each"
+        },
+        "prep": "season",
+        "temp_f": 375,
+        "done_f": 145,
+        "source": "us_qsg"
+      },
+      {
+        "id": "sausages",
+        "name": "Sausages (pork or plant-based)",
+        "amount": {
+          "qty": 6,
+          "unit": "sausage",
+          "units": "sausages"
+        },
+        "temp_f": 375,
+        "done_f": 160,
+        "source": "us_qsg"
+      },
+      {
+        "id": "shrimp",
+        "name": "Jumbo shrimp",
+        "amount": {
+          "qty": 24,
+          "unit": "jumbo shrimp",
+          "units": "jumbo shrimp"
+        },
+        "prep": "season",
+        "temp_f": 350,
+        "done_f": 145,
+        "source": "us_qsg"
+      },
+      {
+        "id": "salmon",
+        "name": "Salmon fillets",
+        "amount": {
+          "qty": 4,
+          "unit": "salmon fillet",
+          "units": "salmon fillets",
+          "detail": "about 6 oz each"
+        },
+        "prep": "season",
+        "temp_f": 350,
+        "done_f": 145,
+        "source": "us_qsg"
+      },
+      {
+        "id": "falafel",
+        "name": "Falafel",
+        "amount": {
+          "qty": 12,
+          "unit": "falafel",
+          "units": "falafel",
+          "detail": "about 1 oz each"
+        },
+        "temp_f": 350,
+        "source": "us_qsg"
+      },
+      {
+        "id": "tofu",
+        "name": "Tofu",
+        "amount": {
+          "qty": 1,
+          "unit": "package (16 oz)",
+          "units": "packages (16 oz each)",
+          "what": "tofu",
+          "prep": "cut in 1–2 inch cubes or sticks"
+        },
+        "temp_f": 350,
+        "source": "us_qsg"
+      }
+    ],
+    "vegetables": [
+      {
+        "id": "frozen-veg",
+        "name": "Frozen vegetables",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "frozen vegetables"
+        },
+        "frozen": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "peas",
+        "name": "Frozen peas",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "frozen peas"
+        },
+        "frozen": true,
+        "base_only": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "broccoli",
+        "name": "Broccoli",
+        "amount": {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "broccoli",
+          "prep": "in 2-inch florets"
+        },
+        "delicate": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "cauliflower",
+        "name": "Cauliflower",
+        "amount": {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "cauliflower",
+          "prep": "in 2-inch florets"
+        },
+        "delicate": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "mushrooms",
+        "name": "Mushrooms",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "mushrooms"
+        },
+        "source": "us_qsg"
+      },
+      {
+        "id": "tomatoes",
+        "name": "Cherry tomatoes",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "cherry tomatoes"
+        },
+        "source": "us_qsg"
+      },
+      {
+        "id": "spinach",
+        "name": "Spinach",
+        "amount": {
+          "qty": 1,
+          "unit": "heaping cup",
+          "units": "heaping cups",
+          "what": "fresh spinach"
+        },
+        "base_only": true,
+        "source": "us_qsg"
+      },
+      {
+        "id": "beans",
+        "name": "Canned beans",
+        "amount": {
+          "qty": 1,
+          "unit": "cup",
+          "units": "cups",
+          "what": "canned beans",
+          "prep": "drained"
+        },
+        "source": "us_qsg"
+      }
+    ],
+    "examples": [
+      {
+        "name": "Burrito bowl",
+        "base": "white-rice",
+        "protein": "chicken-breast",
+        "veg": [
+          "beans"
+        ]
+      },
+      {
+        "name": "Mediterranean bowl",
+        "base": "quinoa",
+        "protein": "meatballs",
+        "veg": [
+          "spinach"
+        ]
+      },
+      {
+        "name": "Salmon with quinoa & peas",
+        "base": "quinoa",
+        "protein": "salmon",
+        "veg": [
+          "peas"
+        ]
+      },
+      {
+        "name": "Chicken broccoli Alfredo",
+        "base": "pasta-alfredo",
+        "protein": "chicken-breast",
+        "veg": [
+          "broccoli"
+        ]
+      },
+      {
+        "name": "Pork chops & mash",
+        "base": "potatoes",
+        "protein": "pork-chops",
+        "veg": []
+      }
+    ]
+  }
 }

@@ -1,4 +1,144 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'Ninja Speedi Recipes'
-theme = 'speedi'
+# Ninja Speedi Guide: Hugo site config. Theme: themes/hugo-breeze-plasma-inspired-theme (vendored copy, the same
+# theme and settings as danielsada.tech so both sites look and navigate alike; see README.md).
+# Requires Hugo >= 0.158 (built and deployed with 0.170.1).
+baseURL = "https://danielsada.github.io/ninja-speedi/"
+title = "Ninja Speedi Guide"
+theme = "hugo-breeze-plasma-inspired-theme"
+locale = "en-US"
+defaultContentLanguage = "en"
+# No posts here: without this Hugo picks the root pages as the main section and the theme renders them as blog posts.
+mainSections = ["none"]
+enableRobotsTXT = true
+# A reference site, not a blog: no posts, feeds or taxonomies.
+disableKinds = ["taxonomy", "term", "rss"]
+
+[minify]
+  minifyOutput = true
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false
+
+[params]
+  description = "Cook times, temperatures, liquid amounts and a Speedi Meal builder for the Ninja Speedi Rapid Cooker & Air Fryer."
+  tagline = "Cook charts & Speedi Meals"
+  logo = "images/DanielSadaLogo.png"
+  favicon = "favicon.ico"   # no leading slash: relative to baseURL, which may be a sub-path
+  ogimage = "images/DanielSadaLogo.png"
+  crumbroot = "Ninja Speedi"
+  colorscheme = "auto"
+  # The main site; linked from Places and the About page.
+  mainsite = "https://danielsada.tech/"
+  repo = "https://github.com/danielsada/ninja-speedi"
+  [params.author]
+    name = "Daniel Sada"
+    email = "hello@danielsada.tech"
+    emaillabel = "hello [at] danielsada.tech"
+    page = "/about"
+
+  # Same colours as danielsada.tech (logo purple).
+  [params.colors]
+    wall = "#3d6fd6"
+    [params.colors.light]
+      accent = "#8a5cd6"
+      ink = "#5e2ca5"
+    [params.colors.dark]
+      accent = "#a77bff"
+      ink = "#c6a8ff"
+
+  [params.panel]
+    width = "17rem"
+  # Title of this site's own section in the panel, below Places (menus.app).
+  [params.panel.app]
+    title = "Ninja Speedi"
+
+  [params.rss]
+    panel = false
+
+  [params.home]
+    [[params.home.main]]
+      widget = "intro"
+    [[params.home.main]]
+      widget = "modes"
+      title = "Cook charts"
+    [[params.home.side]]
+      widget = "builder"
+      title = "Speedi Meal builder"
+    [[params.home.side]]
+      widget = "mainsite"
+      title = "From danielsada.tech"
+
+[menus]
+  # Places: the same entries as danielsada.tech (absolute links), so both sites share one navigation.
+  [[menus.main]]
+    name = "All posts"
+    url = "https://danielsada.tech/posts/"
+    weight = 10
+    [menus.main.params]
+      icon = "blog"
+  [[menus.main]]
+    name = "Notas"
+    url = "https://danielsada.tech/notas/"
+    weight = 20
+    [menus.main.params]
+      icon = "notas"
+      badge = "ES"
+      lang = "es"
+  [[menus.main]]
+    name = "Projects"
+    url = "https://danielsada.tech/projects/"
+    weight = 30
+    [menus.main.params]
+      icon = "apps"
+  [[menus.main]]
+    name = "About"
+    url = "https://danielsada.tech/about/"
+    weight = 40
+    [menus.main.params]
+      icon = "user"
+  [[menus.main]]
+    name = "Contact"
+    url = "mailto:hello@danielsada.tech"
+    weight = 50
+    [menus.main.params]
+      icon = "mail"
+
+  # This site's own pages: a second panel section below Places (layouts/_partials/breeze/panel-projects.html).
+  [[menus.app]]
+    name = "Cook charts"
+    pageRef = "/charts"
+    weight = 10
+    [menus.app.params]
+      icon = "chart"
+  [[menus.app]]
+    name = "Speedi Meal builder"
+    pageRef = "/builder"
+    weight = 20
+    [menus.app.params]
+      icon = "pot"
+  [[menus.app]]
+    name = "About this guide"
+    pageRef = "/about"
+    weight = 30
+    [menus.app.params]
+      icon = "info"
+  [[menus.social]]
+    name = "GitHub"
+    url = "https://github.com/danielsada"
+    weight = 10
+    [menus.social.params]
+      icon = "github"
+  [[menus.social]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/danielsadac"
+    weight = 20
+    [menus.social.params]
+      icon = "linkedin"
+  [[menus.social]]
+    name = "X (Twitter)"
+    url = "https://x.com/danielsadac"
+    weight = 30
+    [menus.social.params]
+      icon = "x"

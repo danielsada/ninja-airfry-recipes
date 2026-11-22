@@ -1,0 +1,55 @@
+{{- /* Cook charts (front matter params.view = "charts"): data/speedi.json "modes" as one Dolphin-style window.
+  Show pane = one row per function; the search box and function filter are handled by assets/js/speedi.js. */ -}}
+{{- $d := hugo.Data.speedi -}}
+{{- $total := 0 }}{{ range $d.modes }}{{ $total = add $total (len .items) }}{{ end -}}
+<section class="win charts" aria-labelledby="charts-h" data-charts data-total="{{ $total }}">
+  <header class="win__bar">
+    {{ partial "breeze/icon.html" (.Params.icon | default "chart") }}
+    <h1 id="charts-h" tabindex="-1">{{ .Title }}</h1>
+    <p class="win__sub">{{ $total }} foods · {{ len $d.modes }} functions</p>
+  </header>
+  <div class="win__loc">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="{{ site.Home.RelPermalink }}">{{ site.Params.crumbroot | default site.Title }}</a></li><li><a href="{{ .RelPermalink }}" aria-current="page">{{ .Title }}</a></li></ol></nav>
+    <label class="show-sel" for="chart-sel"><span>Show</span><select id="chart-sel">
+      <option value="">All functions ({{ $total }})</option>
+      {{- range $d.modes }}<option value="{{ .id }}">{{ .name }} ({{ len .items }})</option>{{ end -}}
+    </select></label>
+    <div class="search" role="search">{{ partial "breeze/icon.html" "search" }}<label class="sr-only" for="chart-q">Filter foods</label><input id="chart-q" type="search" placeholder="Filter foods…  /" autocomplete="off"></div>
+  </div>
+  {{- with .Content }}
+  <div class="win__intro">{{ . }}</div>
+  {{- end }}
+  <div class="fm">
+    <nav class="show" aria-label="Functions"><div class="show__in">
+      <h2 class="ph">Functions</h2>
+      <ul>
+        <li><a href="{{ .RelPermalink }}" data-mode="" aria-current="true">{{ partial "breeze/icon.html" "folder" }}<span>All functions</span><span class="n">{{ $total }}</span></a></li>
+        {{- range $d.modes }}
+        <li><a href="#{{ .id }}" data-mode="{{ .id }}">{{ partial "breeze/icon.html" (.icon | default "temp") }}<span>{{ .name }}</span><span class="n">{{ len .items }}</span></a></li>
+        {{- end }}
+      </ul>
+    </div></nav>
+    <div class="view">
+      <table class="posts speedi">
+        <caption class="sr-only">Cook times, temperatures and liquid by function</caption>
+        <thead><tr><th scope="col" class="nm">Food</th><th scope="col" class="am">Amount</th><th scope="col" class="tp">Temp</th><th scope="col" class="tm">Time</th><th scope="col" class="lq">Liquid &amp; oil</th></tr></thead>
+        {{- range $d.modes }}{{ $mode := .name }}
+        <tbody id="{{ .id }}" data-mode="{{ .id }}"><tr class="yr"><th colspan="5" scope="rowgroup">{{ partial "breeze/icon.html" (.icon | default "temp") }}{{ .name }}<small>{{ len .items }} {{ cond (eq (len .items) 1) "food" "foods" }}</small>{{ with .note }}<span class="d">{{ . }}</span>{{ end }}</th></tr>
+        {{- range .items }}
+        {{- $q := delimit (slice .name (.category | default "") (.prep | default "") $mode) " " | lower }}
+        <tr data-q="{{ $q }}">
+          <td class="nm"><b>{{ .name }}</b>{{ with delimit (complement (slice "") (slice (.prep | default "") (.accessory | default ""))) " · " }}<span class="d">{{ . }}</span>{{ end }}{{ with .tips }}<span class="d tips">{{ delimit . " · " }}</span>{{ end }}</td>
+          <td class="am{{ if not .amount }} none{{ end }}" data-label="Amount">{{ .amount | default "—" }}</td>
+          <td class="tp" data-label="Temp">{{ with .temp_f }}{{ . }}°F{{ else }}{{ .setting | default "—" }}{{ end }}</td>
+          <td class="tm" data-label="Time">{{ partial "speedi/time.html" . | default "—" }}</td>
+          <td class="lq{{ if not (or .liquid .oil) }} none{{ end }}" data-label="Liquid">{{ with .liquid }}{{ . }}{{ end }}{{ with .oil }}<span class="d">Oil: {{ . }}</span>{{ end }}{{ if not (or .liquid .oil) }}—{{ end }}</td>
+        </tr>
+        {{- end }}
+        </tbody>
+        {{- end }}
+      </table>
+      <p class="empty" id="chart-empty" hidden>No foods match. <button class="tool" type="button" data-reset>Show everything</button></p>
+    </div>
+  </div>
+  <footer class="win__status"><span id="chart-status" role="status">{{ $total }} foods</span><button class="tool" type="button" data-reset hidden>Clear filter</button></footer>
+</section>

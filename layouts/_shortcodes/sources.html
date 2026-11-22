@@ -1,0 +1,8 @@
+{{- /* Lists data/speedi.json "sources" (where the chart numbers come from). Usage: {{< sources >}} */ -}}
+{{- with hugo.Data.speedi.sources }}
+<ul>
+  {{- range . }}
+  <li><a href="{{ .url }}">{{ .title }}</a></li>
+  {{- end }}
+</ul>
+{{- end }}

@@ -1,0 +1,89 @@
+/* Ninja Speedi Guide: additions to the Breeze Plasma theme (appended to its stylesheet).
+   Only the theme's tokens (--card, --card-2, --line, --field, --accent-*, --muted…) so light/dark and the
+   accent colours stay in step with danielsada.tech. */
+
+/* ---------- Panel: this site's own section (menus.app), below the shared Places ---------- */
+.appnav { padding-top: 10px; border-top: 1px solid var(--line); }
+
+/* ---------- Cook charts: the theme's details view with Food | Amount | Temp | Time | Liquid ---------- */
+.posts.speedi td.nm::before { content: none; }
+.posts.speedi .nm { padding-left: 16px; }
+.posts.speedi td.nm b { font-size: 1rem; line-height: 1.4; }
+.posts.speedi .am { width: 18%; }
+.posts.speedi .tp { width: 5.5rem; }
+.posts.speedi .tm { width: 7rem; }
+.posts.speedi .lq { width: 17%; }
+.posts.speedi td:not(.nm) { padding-top: 12px; font-size: .9375rem; line-height: 1.45; }
+.posts.speedi td.tp, .posts.speedi td.tm { white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 600; }
+.posts.speedi td.tm { color: var(--accent-ink); }
+.posts.speedi .yr .d { margin: 4px 0 0 1.875rem; font-weight: 400; }
+.posts.speedi tbody tr:not(.yr):hover td { background: var(--accent-soft); }
+.charts [hidden] { display: none !important; }
+
+@container win (max-width: 959px) {
+  .posts.speedi thead { display: none; }
+  .posts.speedi tbody tr:not(.yr) { grid-template-columns: minmax(0, 1fr) 4.75rem 6.25rem; padding: 10px 4px 10px 16px; }
+  .posts.speedi tbody tr:not(.yr) td { width: auto; padding: 0 14px 0 0; }
+  .posts.speedi tbody td.nm { grid-column: 1; grid-row: 1; }
+  .posts.speedi tbody td.am, .posts.speedi tbody td.lq { grid-column: 1; padding-top: 2px; font-size: .875rem; color: var(--muted); }
+  .posts.speedi tbody td.am { grid-row: 2; }
+  .posts.speedi tbody td.lq { grid-row: 3; }
+  .posts.speedi tbody td.tp { grid-column: 2; grid-row: 1 / span 3; padding-top: 2px; }
+  .posts.speedi tbody td.tm { grid-column: 3; grid-row: 1 / span 3; padding-top: 2px; }
+  .posts.speedi td.lq .d { display: inline; margin: 0; font-size: inherit; }
+  .posts.speedi td.lq .d::before { content: " · "; }
+  .posts.speedi td.am::before, .posts.speedi td.lq::before { content: attr(data-label) ": "; font-weight: 600; }
+  .posts.speedi td.none { display: none; }
+}
+@container win (max-width: 679px) {
+  .posts.speedi tbody tr:not(.yr) { grid-template-columns: minmax(0, 1fr) auto auto; padding: 10px 14px 12px; }
+  .posts.speedi tbody td.am, .posts.speedi tbody td.lq { grid-column: 1 / -1; }
+  .posts.speedi tbody td.tp { grid-column: 2; grid-row: 1; padding: 2px 0 0 12px; }
+  .posts.speedi tbody td.tm { grid-column: 3; grid-row: 1; padding: 2px 0 0 12px; }
+  .posts.speedi tbody td.nm { grid-column: 1; }
+  .posts.speedi td.tp, .posts.speedi td.tm { font-size: .875rem; }
+  .posts.speedi .yr .d { margin-left: 0; }
+}
+/* ---------- Speedi Meal builder: form on the left, the meal on the right ---------- */
+.bld { display: grid; grid-template-columns: minmax(0, 19rem) minmax(0, 1fr); }
+.bld__form { display: flex; flex-direction: column; gap: 18px; padding: 16px 18px 24px; background: var(--card-2); border-right: 1px solid var(--line); }
+.bld .ph { display: block; margin: 0 0 6px; }
+.bld .field { min-width: 0; margin: 0; padding: 0; border: 0; }
+.bld select {
+  width: 100%; height: 2.5rem; padding: 0 10px; border: 1px solid var(--field); border-radius: 7px;
+  background: var(--card); color: var(--text); font: inherit; font-size: .9375rem;
+}
+.bld select:focus-visible { outline: none; border-color: var(--accent-ink); box-shadow: 0 0 0 1px var(--accent-ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; display: inline-flex; }
+.chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chip span {
+  padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--card);
+  font-size: .875rem; line-height: 1.3; color: var(--text);
+}
+.chip:hover span { border-color: var(--accent-edge); }
+.chip input:checked + span { background: var(--accent-soft); border-color: var(--sel-edge); color: var(--accent-ink); font-weight: 600; }
+.chip input:focus-visible + span { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+.bld .golinks { flex-direction: column; align-items: flex-start; gap: 10px; }
+.bld__out { min-width: 0; padding: 18px 24px 26px; }
+.bld__out .ph { margin: 22px 0 8px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: 10px; }
+.stats > div { padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--card-2); }
+.stats .ph { margin: 0 0 2px; }
+.stats b { font-size: 1.25rem; line-height: 1.3; font-variant-numeric: tabular-nums; }
+.need, .steps, .notes { margin: 0; padding-left: 1.3em; line-height: 1.55; max-width: 62ch; }
+.need li, .steps li { margin: 4px 0; }
+.steps li::marker { font-weight: 700; color: var(--accent-ink); }
+.notes { margin-top: 18px; padding: 12px 16px 12px 2em; border: 1px solid var(--note-edge); border-radius: 10px; background: var(--note); color: var(--note-ink); }
+.share { margin: 18px 0 0; }
+@container win (max-width: 679px) {
+  .bld { grid-template-columns: minmax(0, 1fr); }
+  .bld__form { border-right: 0; border-bottom: 1px solid var(--line); padding: 14px; }
+  .bld__out { padding: 14px 14px 22px; }
+  .stats b { font-size: 1.0625rem; }
+}
+
+/* ---------- Home ---------- */
+.card--note ul { margin: 10px 0 0; padding-left: 1.2em; line-height: 1.6; }
+.card p { line-height: 1.55; }
+.card > p:first-of-type { margin-top: 0; }
