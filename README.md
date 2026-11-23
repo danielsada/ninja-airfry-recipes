@@ -1,12 +1,14 @@
 # ninja-airfry-recipes
 
-Cook times, temperatures and recipes for my Ninja air fryers, the **Ninja Speedi** and the **Ninja Double Stack**: https://ninja.danielsada.tech/
+Cook times, temperatures and recipes for Ninja air fryers: the **Ninja Speedi**, the **Ninja Double Stack**, the **Ninja Foodi DualZone** and the single-basket **Ninja Air Fryer**: https://ninja.danielsada.tech/
 
 The quick start guides live in a drawer and Ninja's Speedi recipe builder is gone, so the numbers I cook with live here.
 
 - **Speedi cook times** (`/speedi/`): every food from the quick start guide's Steam & Crisp, Air Fry, Steam and Dehydrate charts, plus the Steam & Bake recipes. Filter by function or type to search (`/`); the filter is kept in the URL.
 - **Speedi Meal builder** (`/speedi/meal-builder/`): a rebuild of Ninja Test Kitchen's retired [Speedi Recipe Builder](https://web.archive.org/web/20250906142114/https://ninjatestkitchen.com/speedi-recipe-builder/). Pick a base, protein, seasoning (up to 2), vegetables (up to 3) and toppings, and it writes the recipe: ingredients, liquid, temperature, time and steps, for 3–4 or 1–2 servings. Recipes have shareable links and can be saved in the browser.
 - **US or metric**: the charts and the builder switch between °F / lb / cups and °C / g / ml; the choice is remembered in the browser (browsers set to a region outside the US, or to a language other than English with no region, start in metric).
+- **Foodi DualZone cook times** (`/foodi-dualzone/`): the Foodi 2-Basket Air Fryer (DZ201 series, 8 qt), with each food's time in one zone or both zones, plus Dehydrate.
+- **Air Fryer cook times** (`/air-fryer/`): the single-basket Ninja Air Fryer (AF101 series, 4 qt), Air Fry and Dehydrate.
 - **Double Stack cook times** (`/double-stack/`): the Double Stack XL (SL400 / SL401) chart with each food's time with one drawer or both drawers cooking, two-layer meals stacked in one drawer (rack on top) and Dehydrate. An explainer at the top (`layouts/_shortcodes/doublestack-modes.html`) separates the two.
 
 ## Running the project
@@ -53,7 +55,7 @@ The site uses the same theme and colours as [danielsada.tech](https://danielsada
 
 ## Data
 
-The cook charts come from `data/speedi.json` (Ninja Speedi) and `data/doublestack.json` (Ninja Double Stack), both rendered by `views/charts.html` (`params.data` in the page picks the file):
+The cook charts come from `data/speedi.json` (Ninja Speedi) and `data/doublestack.json` (Ninja Double Stack), `data/dualzone.json` (Foodi DualZone) and `data/airfryer.json` (AF101), all rendered by `views/charts.html` (`params.data` in the page picks the file):
 
 - `sources`: where the numbers come from (listed on the About page).
 - `modes`: one entry per function (`id`, `name`, `icon`, `note`, `items`). Each item has `name`, `category`, `amount`, `prep`, `oil`, `liquid`, `accessory`, `temp_f` (or `setting`), `time_min`, `time_max`, `time_unit` (`min` by default, `hr` for Dehydrate), `tips`, `approx` (shows ≈) and `source`. Two-drawer appliances add `dualzone` (the time with both drawers cooking) and name both time columns in `columns`. Leave out what doesn't apply.

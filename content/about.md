@@ -12,6 +12,8 @@ It's a side project of [danielsada.tech](https://danielsada.tech/), built with H
 
 - **Ninja Speedi:** Ninja's quick start guide for the Speedi (SF300 series, 6 qt). The plain-pasta, tomato-sauce and potato bases come from the UK edition, converted to US units. The builder's ingredient options are the ones from Ninja's archived recipe builder; where the guide has no number for one of them, the recipe says so and explains the estimate.
 - **Ninja Double Stack:** Ninja's quick start guide for the Double Stack XL (SL400 / SL401, 10 qt). The guide gives stacked-meal times with both drawers cooking; the one-drawer stacked times apply its "cut the time by 40–50%" rule, so they're marked ≈. The 8-quart Double Stack (SL201) has its own chart, which isn't here yet.
+- **Ninja Foodi DualZone:** Ninja's quick start guide for the Foodi 2-Basket Air Fryer (DZ201 series, 8 qt). Amounts are per zone; the guide gives a time for one zone and for both zones cooking.
+- **Ninja Air Fryer:** Ninja's quick start guide for the single-basket Air Fryer (AF101 series, 4 qt).
 - **Done temperatures:** the USDA's.
 - **Metric:** the charts and the builder have a *US / Metric* switch. Ninja's numbers are in US units; metric converts them on the page and rounds the way you'd set or weigh them: oven temperatures to the nearest 5 °C (390 °F → 200 °C), done temperatures to the degree, weights to the nearest 5–50 g, cups to millilitres and inches to millimetres or centimetres. Spoons (tbsp, tsp) stay as they are.
 
@@ -21,4 +23,4 @@ Times are guides: thickness, starting temperature and how full the basket or dra
 
 ## Fixes and additions
 
-The data is in [`data/`](https://github.com/danielsada/ninja-airfry-recipes/tree/main/data): `speedi.json`, `builder.json` and `doublestack.json`. Open an issue or a pull request on [GitHub](https://github.com/danielsada/ninja-airfry-recipes) if a time is off or something you cook is missing.
+The data is in [`data/`](https://github.com/danielsada/ninja-airfry-recipes/tree/main/data): `speedi.json`, `builder.json`, `doublestack.json`, `dualzone.json` and `airfryer.json`. Open an issue or a pull request on [GitHub](https://github.com/danielsada/ninja-airfry-recipes) if a time is off or something you cook is missing.

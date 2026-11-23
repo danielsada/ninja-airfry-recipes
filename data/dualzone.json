@@ -1,0 +1,1023 @@
+{
+  "appliance": "Ninja Foodi 2-Basket Air Fryer with DualZone Technology (DZ201 series, 8 qt)",
+  "columns": {
+    "single": "One zone",
+    "dual": "Both zones"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Ninja Foodi 2-Basket Air Fryer (DZ201 series) Quick Start Guide",
+      "url": "https://m.media-amazon.com/images/I/A1ab--Dh6mL.pdf"
+    },
+    {
+      "id": "S2",
+      "title": "DZ201 Series Ninja Foodi 2-Basket Air Fryer: Quick Start Guide (Ninja support)",
+      "url": "https://support.sharkninja.com/article/DZ201-Series-Ninja-Foodi-2-Basket-Air-Fryer-Quick-Start-Guide"
+    }
+  ],
+  "modes": [
+    {
+      "id": "air-fry",
+      "name": "Air Fry",
+      "icon": "fan",
+      "note": "Crisper plate in each zone, one layer of food, amounts are per zone. Shake or toss at least twice. Not on the chart? Use a similar food and cut the time by 25% (for frozen foods, 25% off the package time).",
+      "items": [
+        {
+          "name": "Asparagus",
+          "category": "vegetables",
+          "amount": "1 bunch",
+          "prep": "Whole, stems trimmed",
+          "oil": "2 tsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 8,
+          "time_max": 12,
+          "dualzone": {
+            "time_min": 20,
+            "time_max": 25
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Beets",
+          "category": "vegetables",
+          "amount": "6–7 small",
+          "prep": "Whole",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 30,
+          "time_max": 35,
+          "dualzone": {
+            "time_min": 35,
+            "time_max": 40
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Bell peppers (for roasting)",
+          "category": "vegetables",
+          "amount": "3 small peppers",
+          "prep": "Whole",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 10,
+          "time_max": 15,
+          "dualzone": {
+            "time_min": 15,
+            "time_max": 20
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Broccoli",
+          "category": "vegetables",
+          "amount": "1 head",
+          "prep": "Cut in 1-inch florets",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 8,
+          "time_max": 10,
+          "dualzone": {
+            "time_min": 15,
+            "time_max": 17
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Brussels sprouts",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Cut in half, stem removed",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 15,
+          "time_max": 20,
+          "dualzone": {
+            "time_min": 20,
+            "time_max": 25
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Butternut squash",
+          "category": "vegetables",
+          "amount": "1 1/2 lbs",
+          "prep": "Cut in 1–2-inch pieces",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 20,
+          "time_max": 25,
+          "dualzone": {
+            "time_min": 35,
+            "time_max": 40
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Carrots",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Peeled, cut in 1/2-inch pieces",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 13,
+          "time_max": 16,
+          "dualzone": {
+            "time_min": 25,
+            "time_max": 30
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Cauliflower",
+          "category": "vegetables",
+          "amount": "1 head",
+          "prep": "Cut in 1-inch florets",
+          "oil": "2 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 17,
+          "time_max": 20,
+          "dualzone": {
+            "time_min": 20,
+            "time_max": 25
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Corn on the cob",
+          "category": "vegetables",
+          "amount": "2 ears, cut in half",
+          "prep": "Husks removed",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 12,
+          "time_max": 15,
+          "dualzone": {
+            "time_min": 18,
+            "time_max": 20
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Green beans",
+          "category": "vegetables",
+          "amount": "1 bag (12 oz)",
+          "prep": "Trimmed",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 8,
+          "time_max": 10,
+          "dualzone": {
+            "time_min": 10,
+            "time_max": 15
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Kale (for chips)",
+          "category": "vegetables",
+          "amount": "5 cups, packed",
+          "prep": "Torn in pieces, stems removed",
+          "accessory": "Crisper plate",
+          "temp_f": 300,
+          "time_min": 7,
+          "time_max": 9,
+          "dualzone": {
+            "time_min": 15,
+            "time_max": 20
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Mushrooms",
+          "category": "vegetables",
+          "amount": "8 oz",
+          "prep": "Rinsed, cut in quarters",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 7,
+          "time_max": 9,
+          "dualzone": {
+            "time_min": 13,
+            "time_max": 15
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Russet potatoes, wedges",
+          "category": "vegetables",
+          "amount": "1 1/2 lbs",
+          "prep": "Cut in 1-inch wedges",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 20,
+          "time_max": 22,
+          "dualzone": {
+            "time_min": 35,
+            "time_max": 38
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Russet potatoes, thin hand-cut fries",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Thin hand-cut fries, soaked in water 30 min then patted dry",
+          "oil": "1/2–3 tbsp canola",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 20,
+          "time_max": 24,
+          "dualzone": {
+            "time_min": 30,
+            "time_max": 35
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Russet potatoes, thick hand-cut fries",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Thick hand-cut fries, soaked in water 30 min then patted dry",
+          "oil": "1/2–3 tbsp canola",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 19,
+          "time_max": 24,
+          "dualzone": {
+            "time_min": 35,
+            "time_max": 40
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Russet potatoes, whole baked",
+          "category": "vegetables",
+          "amount": "3 whole (6–8 oz each)",
+          "prep": "Pierced with a fork 3 times",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 30,
+          "time_max": 35,
+          "dualzone": {
+            "time_min": 37,
+            "time_max": 40
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Sweet potatoes, chunks",
+          "category": "vegetables",
+          "amount": "1 1/2 lbs",
+          "prep": "Cut in 1-inch chunks",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 15,
+          "time_max": 20,
+          "dualzone": {
+            "time_min": 30,
+            "time_max": 35
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Sweet potatoes, whole",
+          "category": "vegetables",
+          "amount": "3 whole (6–8 oz each)",
+          "prep": "Pierced with a fork 3 times",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 36,
+          "time_max": 42,
+          "dualzone": {
+            "time_min": 40,
+            "time_max": 45
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Zucchini",
+          "category": "vegetables",
+          "amount": "1 lb",
+          "prep": "Quartered lengthwise, cut in 1-inch pieces",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 15,
+          "time_max": 18,
+          "dualzone": {
+            "time_min": 25,
+            "time_max": 28
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Chicken breasts, bone-in",
+          "category": "poultry",
+          "amount": "2 breasts (3/4–1 1/2 lbs each)",
+          "prep": "Bone in",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 25,
+          "time_max": 30,
+          "dualzone": {
+            "time_min": 30,
+            "time_max": 35
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Chicken breasts, boneless",
+          "category": "poultry",
+          "amount": "4 breasts (1/2–3/4 lb each)",
+          "prep": "Boneless",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 22,
+          "time_max": 24,
+          "dualzone": {
+            "time_min": 25,
+            "time_max": 28
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Chicken thighs, bone-in",
+          "category": "poultry",
+          "amount": "2 thighs (6–10 oz each)",
+          "prep": "Bone in",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 22,
+          "time_max": 28,
+          "dualzone": {
+            "time_min": 26,
+            "time_max": 29
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Chicken thighs, boneless",
+          "category": "poultry",
+          "amount": "4 thighs (4–8 oz each)",
+          "prep": "Boneless",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 18,
+          "time_max": 22,
+          "dualzone": {
+            "time_min": 25,
+            "time_max": 28
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Chicken wings",
+          "category": "poultry",
+          "amount": "2 lbs",
+          "prep": "Drumettes & flats",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 18,
+          "time_max": 22,
+          "dualzone": {
+            "time_min": 43,
+            "time_max": 47
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Crab cakes",
+          "category": "seafood",
+          "amount": "2 cakes (6–8 oz each)",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 5,
+          "time_max": 10,
+          "dualzone": {
+            "time_min": 10,
+            "time_max": 13
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Lobster tails",
+          "category": "seafood",
+          "amount": "4 tails (3–4 oz each)",
+          "prep": "Whole",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 5,
+          "time_max": 8,
+          "dualzone": {
+            "time_min": 15,
+            "time_max": 18
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Salmon fillets",
+          "category": "seafood",
+          "amount": "3 fillets (4 oz each)",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 7,
+          "time_max": 12,
+          "dualzone": {
+            "time_min": 13,
+            "time_max": 17
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Shrimp",
+          "category": "seafood",
+          "amount": "1 lb",
+          "prep": "Whole, peeled, tails on",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 7,
+          "time_max": 10,
+          "dualzone": {
+            "time_min": 10,
+            "time_max": 13
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Burgers",
+          "category": "beef",
+          "amount": "2 quarter-pound patties, 80% lean",
+          "prep": "1/2 inch thick",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 8,
+          "time_max": 10,
+          "dualzone": {
+            "time_min": 10,
+            "time_max": 13
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Steaks",
+          "category": "beef",
+          "amount": "2 steaks (8 oz each)",
+          "prep": "Whole",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 10,
+          "time_max": 20,
+          "dualzone": {
+            "time_min": 14,
+            "time_max": 18
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Bacon",
+          "category": "pork",
+          "amount": "3 strips, cut in half",
+          "accessory": "Crisper plate",
+          "temp_f": 350,
+          "time_min": 8,
+          "time_max": 10,
+          "dualzone": {
+            "time_min": 9,
+            "time_max": 12
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Pork chops, bone-in thick-cut",
+          "category": "pork",
+          "amount": "2 chops (10–12 oz each)",
+          "prep": "Bone in",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 15,
+          "time_max": 17,
+          "dualzone": {
+            "time_min": 23,
+            "time_max": 27
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Pork chops, boneless",
+          "category": "pork",
+          "amount": "2 chops (8 oz each)",
+          "prep": "Boneless",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 14,
+          "time_max": 17,
+          "dualzone": {
+            "time_min": 17,
+            "time_max": 20
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Pork tenderloins",
+          "category": "pork",
+          "amount": "1 lb",
+          "oil": "Brush with oil",
+          "accessory": "Crisper plate",
+          "temp_f": 375,
+          "time_min": 15,
+          "time_max": 20,
+          "dualzone": {
+            "time_min": 25,
+            "time_max": 30
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Sausages",
+          "category": "pork",
+          "amount": "5 sausages",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 7,
+          "time_max": 10,
+          "dualzone": {
+            "time_min": 17,
+            "time_max": 22
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Chicken cutlets (frozen)",
+          "category": "frozen",
+          "amount": "3 cutlets",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 18,
+          "time_max": 21,
+          "dualzone": {
+            "time_min": 20,
+            "time_max": 25
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Chicken nuggets (frozen)",
+          "category": "frozen",
+          "amount": "1 box (12 oz)",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 10,
+          "time_max": 13,
+          "dualzone": {
+            "time_min": 18,
+            "time_max": 21
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Fish fillets, breaded (frozen)",
+          "category": "frozen",
+          "amount": "1 box (6 fillets)",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 14,
+          "time_max": 16,
+          "dualzone": {
+            "time_min": 17,
+            "time_max": 22
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Fish sticks (frozen)",
+          "category": "frozen",
+          "amount": "18 fish sticks (11 oz)",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 10,
+          "time_max": 13,
+          "dualzone": {
+            "time_min": 16,
+            "time_max": 19
+          },
+          "source": "S1"
+        },
+        {
+          "name": "French fries (frozen), 1 lb",
+          "category": "frozen",
+          "amount": "1 lb",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 18,
+          "time_max": 22,
+          "dualzone": {
+            "time_min": 28,
+            "time_max": 32
+          },
+          "source": "S1"
+        },
+        {
+          "name": "French fries (frozen), 2 lb",
+          "category": "frozen",
+          "amount": "2 lbs",
+          "accessory": "Crisper plate",
+          "temp_f": 400,
+          "time_min": 32,
+          "time_max": 36,
+          "dualzone": {
+            "time_min": 50,
+            "time_max": 55
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Mozzarella sticks (frozen)",
+          "category": "frozen",
+          "amount": "1 box (11 oz)",
+          "accessory": "Crisper plate",
+          "temp_f": 375,
+          "time_min": 8,
+          "time_max": 10,
+          "dualzone": {
+            "time_min": 10,
+            "time_max": 12
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Pot stickers (frozen)",
+          "category": "frozen",
+          "amount": "2 bags (10.5 oz)",
+          "oil": "1 tbsp",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 12,
+          "time_max": 14,
+          "dualzone": {
+            "time_min": 16,
+            "time_max": 18
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Pizza rolls (frozen)",
+          "category": "frozen",
+          "amount": "1 bag (20 oz, 40 count)",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 12,
+          "time_max": 15,
+          "dualzone": {
+            "time_min": 15,
+            "time_max": 18
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Popcorn shrimp (frozen)",
+          "category": "frozen",
+          "amount": "1 box (14–16 oz)",
+          "accessory": "Crisper plate",
+          "temp_f": 390,
+          "time_min": 9,
+          "time_max": 11,
+          "dualzone": {
+            "time_min": 14,
+            "time_max": 18
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Sweet potato fries (frozen)",
+          "category": "frozen",
+          "amount": "1 lb",
+          "accessory": "Crisper plate",
+          "temp_f": 375,
+          "time_min": 20,
+          "time_max": 22,
+          "dualzone": {
+            "time_min": 30,
+            "time_max": 32
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Tater tots (frozen)",
+          "category": "frozen",
+          "amount": "1 lb",
+          "accessory": "Crisper plate",
+          "temp_f": 375,
+          "time_min": 18,
+          "time_max": 22,
+          "dualzone": {
+            "time_min": 25,
+            "time_max": 27
+          },
+          "source": "S1"
+        },
+        {
+          "name": "Onion rings (frozen)",
+          "category": "frozen",
+          "amount": "10 oz",
+          "accessory": "Crisper plate",
+          "temp_f": 375,
+          "time_min": 13,
+          "time_max": 16,
+          "dualzone": {
+            "time_min": 18,
+            "time_max": 22
+          },
+          "source": "S1"
+        }
+      ]
+    },
+    {
+      "id": "dehydrate",
+      "name": "Dehydrate",
+      "icon": "sun",
+      "note": "Crisper plate, food in a single layer. The guide gives one time for either one or both zones.",
+      "items": [
+        {
+          "name": "Apples",
+          "category": "fruit & veg",
+          "prep": "Cored, 1/8-inch slices, rinsed in lemon water, patted dry",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 7,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 7,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Asparagus",
+          "category": "fruit & veg",
+          "prep": "Cut in 1-inch pieces, blanched",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Bananas",
+          "category": "fruit & veg",
+          "prep": "Peeled, 3/8-inch slices",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 8,
+          "time_unit": "hr",
+          "time_max": 10,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 8,
+            "time_unit": "hr",
+            "time_max": 10
+          }
+        },
+        {
+          "name": "Beets",
+          "category": "fruit & veg",
+          "prep": "Peeled, 1/8-inch slices",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Eggplant",
+          "category": "fruit & veg",
+          "prep": "Peeled, 1/4-inch slices, blanched",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Fresh herbs",
+          "category": "fruit & veg",
+          "prep": "Rinsed, patted dry, stems removed",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 4,
+          "time_unit": "hr",
+          "time_max": 4,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 4,
+            "time_unit": "hr",
+            "time_max": 4
+          }
+        },
+        {
+          "name": "Ginger root",
+          "category": "fruit & veg",
+          "prep": "3/8-inch slices",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 6,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 6
+          }
+        },
+        {
+          "name": "Mangoes",
+          "category": "fruit & veg",
+          "prep": "Peeled, 3/8-inch slices, pit removed",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Mushrooms",
+          "category": "fruit & veg",
+          "prep": "Cleaned with a soft brush (do not wash)",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Pineapple",
+          "category": "fruit & veg",
+          "prep": "Peeled, cored, 3/8–1/2-inch slices",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Strawberries",
+          "category": "fruit & veg",
+          "prep": "Halved or 1/2-inch slices",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Tomatoes",
+          "category": "fruit & veg",
+          "prep": "3/8-inch slices or grated; steam first to rehydrate",
+          "accessory": "Crisper plate",
+          "temp_f": 135,
+          "time_min": 6,
+          "time_unit": "hr",
+          "time_max": 8,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 6,
+            "time_unit": "hr",
+            "time_max": 8
+          }
+        },
+        {
+          "name": "Beef jerky",
+          "category": "jerky",
+          "prep": "1/4-inch slices, marinated overnight",
+          "accessory": "Crisper plate",
+          "temp_f": 150,
+          "time_min": 5,
+          "time_unit": "hr",
+          "time_max": 7,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 5,
+            "time_unit": "hr",
+            "time_max": 7
+          }
+        },
+        {
+          "name": "Chicken jerky",
+          "category": "jerky",
+          "prep": "1/4-inch slices, marinated overnight",
+          "accessory": "Crisper plate",
+          "temp_f": 150,
+          "time_min": 5,
+          "time_unit": "hr",
+          "time_max": 7,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 5,
+            "time_unit": "hr",
+            "time_max": 7
+          }
+        },
+        {
+          "name": "Turkey jerky",
+          "category": "jerky",
+          "prep": "1/4-inch slices, marinated overnight",
+          "accessory": "Crisper plate",
+          "temp_f": 150,
+          "time_min": 5,
+          "time_unit": "hr",
+          "time_max": 7,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 5,
+            "time_unit": "hr",
+            "time_max": 7
+          }
+        },
+        {
+          "name": "Salmon jerky",
+          "category": "jerky",
+          "prep": "1/4-inch slices, marinated overnight",
+          "accessory": "Crisper plate",
+          "temp_f": 150,
+          "time_min": 3,
+          "time_unit": "hr",
+          "time_max": 5,
+          "source": "S1",
+          "dualzone": {
+            "time_min": 3,
+            "time_unit": "hr",
+            "time_max": 5
+          }
+        }
+      ]
+    }
+  ]
+}

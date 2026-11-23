@@ -22,8 +22,8 @@ disableKinds = ["taxonomy", "term", "rss"]
     wrapStandAloneImageWithinParagraph = false
 
 [params]
-  description = "Ninja air fryer cook times. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one drawer, both drawers or stacked."
-  tagline = "Speedi & Double Stack cook times"
+  description = "Ninja air fryer cook times. Ninja Speedi cook charts and Speedi Meal builder, Ninja Double Stack times for one drawer, both drawers or stacked, and Ninja Foodi DualZone and Air Fryer charts."
+  tagline = "Speedi, Double Stack, DualZone & Air Fryer cook times"
   logo = "images/DanielSadaLogo.png"
   favicon = "favicon.ico"   # no leading slash: relative to baseURL, which may be a sub-path
   ogimage = "images/og.png"   # 1200x630 social card (assets/images/og.png)
@@ -60,6 +60,12 @@ disableKinds = ["taxonomy", "term", "rss"]
   [[params.panel.sections]]
     menu = "doublestack"
     title = "Ninja Double Stack"
+  [[params.panel.sections]]
+    menu = "dualzone"
+    title = "Ninja Foodi DualZone"
+  [[params.panel.sections]]
+    menu = "airfryer"
+    title = "Ninja Air Fryer"
 
   [params.rss]
     panel = false
@@ -87,6 +93,21 @@ disableKinds = ["taxonomy", "term", "rss"]
       ref = "/double-stack"
       anchor = "stacked"
 
+  [[params.appliances]]
+    name = "Ninja Foodi DualZone"
+    page = "/foodi-dualzone"
+    svg = "speedi/appliances/dualzone.svg"
+    [[params.appliances.links]]
+      text = "Cook times"
+      ref = "/foodi-dualzone"
+  [[params.appliances]]
+    name = "Ninja Air Fryer"
+    page = "/air-fryer"
+    svg = "speedi/appliances/airfryer.svg"
+    [[params.appliances.links]]
+      text = "Cook times"
+      ref = "/air-fryer"
+
   [params.home]
     [[params.home.main]]
       widget = "intro"
@@ -103,6 +124,16 @@ disableKinds = ["taxonomy", "term", "rss"]
       title = "Ninja Double Stack cook times"
       page = "/double-stack"
       data = "doublestack"
+    [[params.home.main]]
+      widget = "modes"
+      title = "Ninja Foodi DualZone cook times"
+      page = "/foodi-dualzone"
+      data = "dualzone"
+    [[params.home.main]]
+      widget = "modes"
+      title = "Ninja Air Fryer cook times"
+      page = "/air-fryer"
+      data = "airfryer"
     [[params.home.side]]
       widget = "builder"
       title = "Speedi Meal builder"
@@ -184,6 +215,32 @@ disableKinds = ["taxonomy", "term", "rss"]
     weight = 30
     [menus.doublestack.params]
       icon = "fan"
+
+  [[menus.dualzone]]
+    name = "Cook times"
+    pageRef = "/foodi-dualzone"
+    weight = 10
+    [menus.dualzone.params]
+      icon = "chart"
+  [[menus.dualzone]]
+    name = "Air Fry"
+    url = "/foodi-dualzone/#air-fry"
+    weight = 20
+    [menus.dualzone.params]
+      icon = "fan"
+
+  [[menus.airfryer]]
+    name = "Cook times"
+    pageRef = "/air-fryer"
+    weight = 10
+    [menus.airfryer.params]
+      icon = "chart"
+  [[menus.airfryer]]
+    name = "Dehydrate"
+    url = "/air-fryer/#dehydrate"
+    weight = 20
+    [menus.airfryer.params]
+      icon = "sun"
 
   [[menus.project]]
     name = "Home: pick your Ninja"

@@ -1,5 +1,5 @@
 {{- /* Lists the "sources" of the given data files (default: all appliance charts). Usage: {{< sources >}} or {{< sources "speedi" >}} */ -}}
-{{- $files := cond (gt (len .Params) 0) .Params (slice "speedi" "doublestack") -}}
+{{- $files := cond (gt (len .Params) 0) .Params (slice "speedi" "doublestack" "dualzone" "airfryer") -}}
 {{- $seen := dict -}}
 <ul>
 {{- range $files }}
