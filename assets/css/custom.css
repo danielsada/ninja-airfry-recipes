@@ -192,22 +192,22 @@
 /* ---------- Home: "Which Ninja do you have?" ---------- */
 .picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
 .pick {
-  position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 18px 16px;
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 18px 18px 16px;
   border: 1px solid var(--line); border-radius: 12px; background: var(--card-2); text-align: center; transition: border-color .12s, background-color .12s;
 }
 .pick:hover { border-color: var(--accent-edge); background: color-mix(in srgb, var(--accent-soft) 45%, var(--card-2)); }
 .pick:has(h3 a:focus-visible) { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
-.pick__fig svg { display: block; width: 7.5rem; height: 7.5rem; color: var(--text); }
+.pick__fig svg { display: block; width: 7rem; height: 7rem; color: var(--text); }
 .pick__fig .hl { fill: var(--accent-soft); stroke: var(--accent-ink); }
 .pick__fig .steam { stroke: var(--accent-ink); }
 .pick:hover .pick__fig svg { color: var(--accent-ink); }
-.pick h3 { margin: 0; font-size: 1.25rem; letter-spacing: -.01em; }
+.pick h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; letter-spacing: -.01em; }
 .pick h3 a { color: var(--text); text-decoration: none; }
 .pick h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .pick h3 a:focus-visible { outline: none; }
 .pick:hover h3 a { color: var(--accent-ink); }
-.pick .sub { margin: -6px 0 0; font-size: .8125rem; color: var(--muted); }
-.pick p { margin: 0; font-size: .9375rem; line-height: 1.5; }
+.pick .sub { margin: -4px 0 0; font-size: .8125rem; line-height: 1.4; color: var(--muted); }
+.pick p:not(.sub) { margin: 0; font-size: .9375rem; line-height: 1.5; }
 .pick .golinks { position: relative; z-index: 1; justify-content: center; margin-top: auto; padding-top: 4px; }
 
 /* ---------- Home ---------- */
