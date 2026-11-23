@@ -6,7 +6,7 @@ The quick start guides live in a drawer and Ninja's Speedi recipe builder is gon
 
 - **Speedi cook times** (`/speedi/`): every food from the quick start guide's Steam & Crisp, Air Fry, Steam and Dehydrate charts, plus the Steam & Bake recipes. Filter by function or type to search (`/`); the filter is kept in the URL.
 - **Speedi Meal builder** (`/speedi/meal-builder/`): a rebuild of Ninja Test Kitchen's retired [Speedi Recipe Builder](https://web.archive.org/web/20250906142114/https://ninjatestkitchen.com/speedi-recipe-builder/). Pick a base, protein, seasoning (up to 2), vegetables (up to 3) and toppings, and it writes the recipe: ingredients, liquid, temperature, time and steps, for 3–4 or 1–2 servings. Recipes have shareable links and can be saved in the browser.
-- **US or metric**: the charts and the builder switch between °F / lb / cups and °C / g / ml; the choice is remembered in the browser (browsers set to a region outside the US start in metric).
+- **US or metric**: the charts and the builder switch between °F / lb / cups and °C / g / ml; the choice is remembered in the browser (browsers set to a region outside the US, or to a language other than English with no region, start in metric).
 - **Double Stack cook times** (`/double-stack/`): the Double Stack XL (SL400 / SL401) chart with each food's time with one drawer or both drawers cooking, two-layer meals stacked in one drawer (rack on top) and Dehydrate. An explainer at the top (`layouts/_shortcodes/doublestack-modes.html`) separates the two.
 
 ## Running the project

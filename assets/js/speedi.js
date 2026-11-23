@@ -16,7 +16,7 @@
   /* ---------- US / metric units ----------
      The data is in Ninja's US units. In metric mode every text node inside a [data-charts] / [data-builder] window is
      rewritten: °F → °C, lb/oz → g/kg, cups/qt → ml/L, inches → mm/cm. Spoons (tbsp, tsp) stay. The choice is kept in
-     localStorage; with none saved, browsers set to a region outside the US start in metric. */
+     localStorage; with none saved, browsers set to a region outside the US (or a non-English language with no region) start in metric. */
   var units = (function () {
     var KEY = 'speedi.units';
     var NUM = '(?:\\d+ \\d+/\\d+|\\d+/\\d+|\\d+(?:\\.\\d+)?)';
@@ -50,33 +50,48 @@
       return v.map(function (f) { var c = (f - 32) * 5 / 9; return exact ? Math.round(c) : to(c, 5); }).join('–') + '°C';
     };
     var convert = function (s, exact) {
-      return s.replace(RE, function (m, a, b, f, w, inch, hin, sin) {
-        var v = [num(a)].concat(b ? [num(b)] : []);
-        if (f) return temp(v, exact);
-        if (inch || hin || sin) return length(v);
-        if (/^(lb|pound)/.test(w)) return mass(v.map(function (x) { return x * 16; }));
-        if (/^oz|^ounce/.test(w)) return mass(v);
-        if (/^(qt|quart)/.test(w)) return volume(v.map(function (x) { return x * 4; }));
-        return volume(v);
-      });
+      return s
+        /* "4 quarter-pound patties" → "4 × 110 g patties" */
+        .replace(/(\d+ )?quarter-pound\b/g, function (m, n) { return (n ? n + '× ' : '') + mass([4]); })
+        /* "8x4 in loaf pan" → "20x10 cm loaf pan" */
+        .replace(/(\d+)\s?x\s?(\d+)\s?-?in(?:ch(?:es)?)?\b/g, function (m, a, b) {
+          return length([+a]).replace(/ cm$/, '') + 'x' + length([+b]);
+        })
+        /* "1 heaping cup spinach" → "heaping 240 ml spinach" */
+        .replace(new RegExp('(' + NUM + ') heaping cups?\\b', 'g'), function (m, a) { return 'heaping ' + volume([num(a)]); })
+        .replace(RE, function (m, a, b, f, w, inch, hin, sin) {
+          var v = [num(a)].concat(b ? [num(b)] : []);
+          if (f) return temp(v, exact);
+          if (inch || hin || sin) return length(v);
+          if (/^(lb|pound)/.test(w)) return mass(v.map(function (x) { return x * 16; }));
+          if (/^oz|^ounce/.test(w)) return mass(v);
+          if (/^(qt|quart)/.test(w)) return volume(v.map(function (x) { return x * 4; }));
+          return volume(v);
+        });
     };
 
     var stored = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
     var guess = function () {
-      var region = ((navigator.languages && navigator.languages[0]) || navigator.language || '').split(/[-_]/)[1];
-      return !region || /^(US|LR|MM)$/i.test(region) ? 'us' : 'metric';
+      var lang = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').split(/[-_]/);
+      return lang[1] ? (/^(US|LR|MM)$/i.test(lang[1]) ? 'us' : 'metric') : (lang[0].toLowerCase() === 'en' ? 'us' : 'metric');
     };
     var mode = stored() === 'metric' || stored() === 'us' ? stored() : guess();
-    var orig = new WeakMap(), roots = [];
+    /* text node → { us: its US text, shown: what this script last wrote }; if other code has changed the text since, that becomes the US text */
+    var seen = new WeakMap(), roots = [];
 
     var apply = function (root) {
       var walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
         acceptNode: function (n) { return n.parentNode.closest('script, style, .units') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; }
       });
       for (var n; (n = walk.nextNode());) {
-        if (!orig.has(n)) { if (!/\d/.test(n.nodeValue)) continue; orig.set(n, n.nodeValue); }
-        var text = mode === 'metric' ? convert(orig.get(n), !!n.parentNode.closest('[data-exact]')) : orig.get(n);
-        if (n.nodeValue !== text) n.nodeValue = text;
+        var rec = seen.get(n);
+        if (!rec || rec.shown !== n.nodeValue) {
+          if (!/\d|quarter-pound/.test(n.nodeValue)) continue;
+          rec = { us: n.nodeValue };
+          seen.set(n, rec);
+        }
+        rec.shown = mode === 'metric' ? convert(rec.us, !!n.parentNode.closest('[data-exact]')) : rec.us;
+        if (n.nodeValue !== rec.shown) n.nodeValue = rec.shown;
       }
       $$('.units [data-units]', root).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-units') === mode)); });
     };
