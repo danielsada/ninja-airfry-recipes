@@ -1,7 +1,7 @@
 # Ninja Air Fry Recipes: Hugo site config. Theme: themes/hugo-breeze-plasma-inspired-theme (vendored copy, the same
 # theme and settings as danielsada.tech so both sites look and navigate alike; see README.md).
-# Requires Hugo >= 0.158 (built and deployed with 0.170.1).
-baseURL = "https://danielsada.github.io/ninja-airfry-recipes/"
+# Requires Hugo >= 0.158 (built and deployed with 0.170.1). Deployed by Cloudflare Pages (README.md > Deploy).
+baseURL = "https://ninja.danielsada.tech/"
 title = "Ninja Air Fry Recipes"
 theme = "hugo-breeze-plasma-inspired-theme"
 locale = "en-US"

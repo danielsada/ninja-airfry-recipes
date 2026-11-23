@@ -1,19 +1,14 @@
-# Builds the site with Hugo and publishes it to GitHub Pages.
-name: Deploy Hugo site to Pages
+# Checks that the site builds cleanly. Cloudflare Pages builds and deploys it (README.md > Deploy).
+name: Build check
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 env:
   HUGO_VERSION: 0.170.1
@@ -31,40 +26,17 @@ jobs:
           sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
           hugo version
 
-      - id: pages
-        uses: actions/configure-pages@v5
-
       - name: Build
         env:
           HUGO_ENVIRONMENT: production
-          TZ: America/Los_Angeles
+        run: hugo --minify --gc --panicOnWarning
+
+      # Every root-relative link must point at a page or file that was built.
+      - name: Check internal links
         run: |
-          hugo --minify --gc --panicOnWarning \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-
-      # Served from a sub-path (/<repo>/) on GitHub Pages: every root-relative link must carry it.
-      - name: Check links keep the base path
-        env:
-          BASE_PATH: ${{ steps.pages.outputs.base_path }}
-        run: |
-          if [ -n "${BASE_PATH}" ]; then
-            bad=$(grep -rhoE '(href|src)="/[^"]*"' public --include='*.html' \
-                  | grep -vE "=\"${BASE_PATH}/" | sort -u || true)
-            if [ -n "$bad" ]; then echo "Links missing ${BASE_PATH}:"; echo "$bad"; exit 1; fi
-            twice=$(grep -rhoE "(href|src)=\"?${BASE_PATH}${BASE_PATH}/[^\" >]*" public --include='*.html' | sort -u || true)
-            if [ -n "$twice" ]; then echo "Links with ${BASE_PATH} twice:"; echo "$twice"; exit 1; fi
-          fi
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          missing=""
+          for p in $(grep -rhoE '(href|src)="?/[^" >#?]*' public --include='*.html' | sed -E 's/^(href|src)="?//' | sort -u); do
+            f="public${p}"
+            [ -e "$f" ] || [ -e "${f%/}/index.html" ] || missing="$missing $p"
+          done
+          if [ -n "$missing" ]; then echo "Links to missing files:"; printf '%s\n' $missing; exit 1; fi

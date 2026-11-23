@@ -1,6 +1,6 @@
 # ninja-airfry-recipes
 
-Cook times, temperatures and recipes for my Ninja air fryers, the **Ninja Speedi** and the **Ninja Double Stack**: https://danielsada.github.io/ninja-airfry-recipes/
+Cook times, temperatures and recipes for my Ninja air fryers, the **Ninja Speedi** and the **Ninja Double Stack**: https://ninja.danielsada.tech/
 
 The quick start guides live in a drawer and Ninja's Speedi recipe builder is gone, so the numbers I cook with live here.
 
@@ -13,14 +13,25 @@ The quick start guides live in a drawer and Ninja's Speedi recipe builder is gon
 Requires **Hugo 0.170.1** (any edition; the theme needs ≥ 0.158). No Node, Tailwind or other build step.
 
 ```sh
-hugo server        # http://localhost:1313/ninja-airfry-recipes/
+hugo server        # http://localhost:1313/
 hugo               # build into public/
 ```
 
 ## Deploy
 
-`.github/workflows/hugo.yml` builds and publishes to GitHub Pages on every push to `main`. It uses `--panicOnWarning`, so a build warning fails the deploy, and it checks that every link keeps the `/ninja-airfry-recipes/` base path.
+The site is deployed by **Cloudflare Pages** from the `main` branch to https://ninja.danielsada.tech, the same way as danielsada.tech:
 
+| Setting | Value |
+|---|---|
+| Framework preset | Hugo |
+| Build command | `hugo --minify --gc` |
+| Build output directory | `public` |
+| Environment variable (Production and Preview) | `HUGO_VERSION` = `0.170.1` |
+| Custom domain | `ninja.danielsada.tech` |
+
+`baseURL` in `hugo.toml` is the custom domain, so canonical links, the sitemap and the social card point there. Keep `HUGO_VERSION` in sync with the version you use locally (minimum 0.158).
+
+`.github/workflows/hugo.yml` checks every push and pull request: the build must have no warnings (`--panicOnWarning`) and every internal link must point at a file that was built.
 ## Theme
 
 The site uses the same theme and colours as [danielsada.tech](https://danielsada.tech), **Breeze Plasma** ([hugo-breeze-plasma-inspired-theme](https://github.com/danielsada/hugo-breeze-plasma-inspired-theme)), vendored as plain files in `themes/hugo-breeze-plasma-inspired-theme/`, so the two sites look and navigate alike. To update it, replace that folder with a newer copy of the theme repository, without its repo-only folders (`exampleSite/`, `docs/`, `images/`, `scripts/`, `.github/`). Don't edit files in the vendored theme; use these extension points instead:
