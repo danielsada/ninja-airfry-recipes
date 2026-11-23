@@ -13,6 +13,7 @@ It's a side project of [danielsada.tech](https://danielsada.tech/), built with H
 - **Ninja Speedi:** Ninja's quick start guide for the Speedi (SF300 series, 6 qt). The plain-pasta, tomato-sauce and potato bases come from the UK edition, converted to US units. The builder's ingredient options are the ones from Ninja's archived recipe builder; where the guide has no number for one of them, the recipe says so and explains the estimate.
 - **Ninja Double Stack:** Ninja's quick start guide for the Double Stack XL (SL400 / SL401, 10 qt). The guide gives stacked-meal times with both drawers cooking; the one-drawer stacked times apply its "cut the time by 40–50%" rule, so they're marked ≈. The 8-quart Double Stack (SL201) has its own chart, which isn't here yet.
 - **Done temperatures:** the USDA's.
+- **Metric:** the charts and the builder have a *US / Metric* switch. Ninja's numbers are in US units; metric converts them on the page and rounds the way you'd set or weigh them: oven temperatures to the nearest 5 °C (390 °F → 200 °C), done temperatures to the degree, weights to the nearest 5–50 g, cups to millilitres and inches to millimetres or centimetres. Spoons (tbsp, tsp) stay as they are.
 
 {{< sources >}}
 

@@ -13,9 +13,109 @@
     if (u !== location.pathname + location.search + location.hash) history.replaceState(null, '', u);
   };
 
+  /* ---------- US / metric units ----------
+     The data is in Ninja's US units. In metric mode every text node inside a [data-charts] / [data-builder] window is
+     rewritten: °F → °C, lb/oz → g/kg, cups/qt → ml/L, inches → mm/cm. Spoons (tbsp, tsp) stay. The choice is kept in
+     localStorage; with none saved, browsers set to a region outside the US (or a non-English language with no region) start in metric. */
+  var units = (function () {
+    var KEY = 'speedi.units';
+    var NUM = '(?:\\d+ \\d+/\\d+|\\d+/\\d+|\\d+(?:\\.\\d+)?)';
+    var RE = new RegExp('(' + NUM + ')(?:\\s?[–-]\\s?(' + NUM + '))?' +
+      '(?:\\s?(°F)|\\s?-?(lbs?|pounds?|oz|ounces?|cups?|qt|quarts?)\\b|\\s?-?(inch(?:es)?)\\b|-(in)\\b|\\s(in)(?=\\s+(?:thick|pieces|wedges|cubes|slices|round|crust|pan)\\b|[,)]|$))', 'g');
+    var num = function (s) {
+      return s.split(' ').reduce(function (t, p) { var f = p.split('/'); return t + (f.length > 1 ? f[0] / f[1] : +f[0]); }, 0);
+    };
+    var to = function (n, step) { return Math.round(n / step) * step; };
+    var dec = function (n) { return String(+n.toFixed(1)); };
+    /* each converter takes [low, high] in US units and returns the metric text, rounded the way a cook would weigh it */
+    var mass = function (v) {
+      var g = v.map(function (x) { return x * 28.3495; }), top = g[g.length - 1];
+      if (top >= 1000) return g.map(function (x) { return dec(x / 1000); }).join('–') + ' kg';
+      var step = top < 100 ? 5 : top < 500 ? 10 : 50;
+      return g.map(function (x) { return Math.max(to(x, step), step); }).join('–') + ' g';
+    };
+    var volume = function (v) {
+      var ml = v.map(function (x) { return x * 236.588; }), top = ml[ml.length - 1];
+      if (top >= 1000) return ml.map(function (x) { return dec(x / 1000); }).join('–') + ' L';
+      return ml.map(function (x) { return to(x, top < 100 ? 5 : 10); }).join('–') + ' ml';
+    };
+    var length = function (v) {
+      var mm = v.map(function (x) { return x * 25.4; }), top = Math.round(mm[mm.length - 1]);
+      if (top < 10) return mm.map(Math.round).join('–') + ' mm';
+      var step = top < 100 ? 0.5 : 1;
+      return mm.map(function (x) { return dec(Math.max(to(x / 10, step), step)); }).join('–') + ' cm';
+    };
+    /* settings to the nearest 5 °C, like a metric dial (390 °F → 200 °C); internal (exact) temperatures to the degree (165 °F → 74 °C) */
+    var temp = function (v, exact) {
+      return v.map(function (f) { var c = (f - 32) * 5 / 9; return exact ? Math.round(c) : to(c, 5); }).join('–') + '°C';
+    };
+    var convert = function (s, exact) {
+      return s
+        /* "4 quarter-pound patties" → "4 × 110 g patties" */
+        .replace(/(\d+ )?quarter-pound\b/g, function (m, n) { return (n ? n + '× ' : '') + mass([4]); })
+        /* "8x4 in loaf pan" → "20x10 cm loaf pan" */
+        .replace(/(\d+)\s?x\s?(\d+)\s?-?in(?:ch(?:es)?)?\b/g, function (m, a, b) {
+          return length([+a]).replace(/ cm$/, '') + 'x' + length([+b]);
+        })
+        /* "1 heaping cup spinach" → "heaping 240 ml spinach" */
+        .replace(new RegExp('(' + NUM + ') heaping cups?\\b', 'g'), function (m, a) { return 'heaping ' + volume([num(a)]); })
+        .replace(RE, function (m, a, b, f, w, inch, hin, sin) {
+          var v = [num(a)].concat(b ? [num(b)] : []);
+          if (f) return temp(v, exact);
+          if (inch || hin || sin) return length(v);
+          if (/^(lb|pound)/.test(w)) return mass(v.map(function (x) { return x * 16; }));
+          if (/^oz|^ounce/.test(w)) return mass(v);
+          if (/^(qt|quart)/.test(w)) return volume(v.map(function (x) { return x * 4; }));
+          return volume(v);
+        });
+    };
+
+    var stored = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
+    var guess = function () {
+      var lang = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').split(/[-_]/);
+      return lang[1] ? (/^(US|LR|MM)$/i.test(lang[1]) ? 'us' : 'metric') : (lang[0].toLowerCase() === 'en' ? 'us' : 'metric');
+    };
+    var mode = stored() === 'metric' || stored() === 'us' ? stored() : guess();
+    /* text node → { us: its US text, shown: what this script last wrote }; if other code has changed the text since, that becomes the US text */
+    var seen = new WeakMap(), roots = [];
+
+    var apply = function (root) {
+      var walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode: function (n) { return n.parentNode.closest('script, style, .units') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; }
+      });
+      for (var n; (n = walk.nextNode());) {
+        var rec = seen.get(n);
+        if (!rec || rec.shown !== n.nodeValue) {
+          if (!/\d|quarter-pound/.test(n.nodeValue)) continue;
+          rec = { us: n.nodeValue };
+          seen.set(n, rec);
+        }
+        rec.shown = mode === 'metric' ? convert(rec.us, !!n.parentNode.closest('[data-exact]')) : rec.us;
+        if (n.nodeValue !== rec.shown) n.nodeValue = rec.shown;
+      }
+      $$('.units [data-units]', root).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-units') === mode)); });
+    };
+    var init = function (root) {
+      roots.push(root);
+      $$('.units', root).forEach(function (g) {
+        g.hidden = false;
+        g.addEventListener('click', function (e) {
+          var b = e.target.closest('[data-units]');
+          if (!b) return;
+          mode = b.getAttribute('data-units');
+          try { localStorage.setItem(KEY, mode); } catch (err) { /* private mode: this page only */ }
+          roots.forEach(apply);
+        });
+      });
+      apply(root);
+    };
+    return { init: init, apply: apply, convert: convert };
+  })();
+
   /* ---------- Cook charts ---------- */
   var charts = $('[data-charts]');
   if (charts) {
+    units.init(charts);
     var input = $('#chart-q', charts), sel = $('#chart-sel', charts), status = $('#chart-status', charts);
     var empty = $('#chart-empty', charts), clear = $('.win__status [data-reset]', charts);
     var links = $$('.show a[data-mode]', charts), groups = $$('tbody[data-mode]', charts);
@@ -121,6 +221,7 @@
      (&serves=half) shows the recipe; &edit=1 shows the picks. */
   var builder = $('[data-builder]');
   if (builder) {
+    units.init(builder);
     var data = JSON.parse($('#rb-data', builder).textContent);
     var sprite = JSON.parse($('#rb-sprite', builder).textContent);
     var form = $('#rb-form', builder), pick = $('#rb-pick', builder), card = $('#rb-recipe', builder);
@@ -245,7 +346,7 @@
       stepsOut.push('Close the lid and flip the SmartSwitch to <b>Rapid Cooker</b>. Select <b>Speedi Meals</b>, set <b>' + temp + '°F</b> and <b>' + time + ' minutes</b>, then press Start/Stop.');
       stepsOut.push('It steams first' + (base.steam ? ' (' + esc(base.steam) + ' minutes)' : '') + ' while the display shows progress bars, then the timer counts down while it crisps.');
       if (trayLate.length) stepsOut.push('With 5–7 minutes left, open the lid, toss the ' + list(trayLate.map(nm)) + ' with a little oil' + (seas.length ? ' and seasoning' : '') + ', add ' + (trayLate.length > 1 ? 'them' : 'it') + ' to the tray, close the lid and let it finish.');
-      if (protein && protein.done_f) stepsOut.push('Check the ' + nm(protein) + ' reach <b>' + protein.done_f + '°F</b> inside. If not, give them a few more minutes.');
+      if (protein && protein.done_f) stepsOut.push('Check the ' + nm(protein) + ' reach <b data-exact>' + protein.done_f + '°F</b> inside. If not, give them a few more minutes.');
       stepsOut.push((tray ? 'Lift out the tray and stir the base. ' : 'Stir the base. ') + (base.finish ? esc(base.finish) + ' ' : '') +
         (tops.length ? 'Serve topped with ' + list(tops.map(function (x) { return esc(lc(x.name)); })) + '.' : 'Serve.'));
 
@@ -317,6 +418,7 @@
       if (isRecipe) crumbBuilder.removeAttribute('aria-current'); else crumbBuilder.setAttribute('aria-current', 'page');
       if (isRecipe) {
         card.innerHTML = recipe(s);
+        units.apply(card);
         document.title = $('#recipe-h', card).textContent + ' · ' + site;
       } else {
         error.hidden = true;

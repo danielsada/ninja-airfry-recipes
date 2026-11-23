@@ -214,3 +214,10 @@
 .card--note ul { margin: 10px 0 0; padding-left: 1.2em; line-height: 1.6; }
 .card p { line-height: 1.55; }
 .card > p:first-of-type { margin-top: 0; }
+
+/* US / metric toggle (layouts/_partials/speedi/units.html) in the window's location bar */
+.units { display: flex; gap: 6px; margin-left: auto; }
+.units[hidden] { display: none; }
+.units .chip-b small { font-size: .75rem; color: var(--muted); }
+/* the theme hides a location bar without a search box in narrow windows; keep the builder's for the switch */
+.win__loc:has(.units:not([hidden])) { display: flex; }

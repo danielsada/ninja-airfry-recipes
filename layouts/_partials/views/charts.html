@@ -23,6 +23,7 @@
       {{- range $d.modes }}<option value="{{ .id }}">{{ .name }} ({{ len .items }})</option>{{ end -}}
     </select></label>
     <div class="search" role="search">{{ partial "breeze/icon.html" "search" }}<label class="sr-only" for="chart-q">Filter foods</label><input id="chart-q" type="search" placeholder="Filter foods…  /" autocomplete="off"></div>
+    {{ partial "speedi/units.html" . }}
   </div>
   {{- with .Content }}
   <div class="win__intro">{{ . }}</div>
