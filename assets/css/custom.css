@@ -17,6 +17,24 @@
   .posts.speedi.stacked tbody td.lq { grid-column: 1 / -1; grid-row: 4; width: auto; }
 }
 
+/* ---------- Double Stack: "both drawers" vs "two layers in one drawer" explainer ---------- */
+.win__intro:has(.dsm) { max-width: none; }
+.win__intro:has(.dsm) > p { max-width: 72ch; }
+.dsm { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 12px; margin: 4px 0 12px; }
+.dsm__card {
+  display: flex; align-items: center; gap: 16px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--card); color: var(--text); text-decoration: none;
+}
+.dsm__card:hover { border-color: var(--accent-edge); background: color-mix(in srgb, var(--accent-soft) 45%, var(--card)); }
+.dsm__card:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+.dsm__fig { flex: none; width: 6.5rem; height: 5.2rem; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; color: var(--muted); }
+.dsm__fig .on { fill: var(--accent-soft); stroke: var(--accent-ink); }
+.dsm__fig .heat, .dsm__fig .rack { stroke: var(--accent-ink); }
+.dsm__fig .veg { fill: color-mix(in srgb, var(--muted) 18%, transparent); }
+.dsm__txt { display: flex; flex-direction: column; gap: 4px; font-size: .9375rem; line-height: 1.45; color: var(--muted); }
+.dsm__txt b { font-size: 1rem; color: var(--text); }
+.dsm__txt em { font-style: normal; font-weight: 600; color: var(--accent-ink); }
+
 /* ---------- Panel: this site's own section (menus.app), below the shared Places ---------- */
 .appnav { padding-top: 10px; border-top: 1px solid var(--line); }
 .appnav--plain { padding-top: 6px; }

@@ -1,8 +1,8 @@
 {
   "appliance": "Ninja Double Stack XL 2-Basket Air Fryer (SL400 / SL401, 10 qt)",
   "columns": {
-    "single": "One basket",
-    "dual": "Both baskets"
+    "single": "One drawer",
+    "dual": "Both drawers"
   },
   "sources": [
     {
@@ -21,7 +21,7 @@
       "id": "air-fry",
       "name": "Air Fry",
       "icon": "fan",
-      "note": "Crisper plate only (no rack), food in one layer. Shake or toss at least 3 times.",
+      "note": "One layer of food on the crisper plate, no rack. Shake or toss at least 3 times.",
       "items": [
         {
           "name": "Asparagus",
@@ -463,7 +463,7 @@
             "time_max": 80
           },
           "tips": [
-            "Split over both baskets with Match Cook; shake at 25, 10 and 5 min left"
+            "Split over both drawers with Match Cook; shake at 25, 10 and 5 min left"
           ],
           "source": "S1"
         },
@@ -832,15 +832,15 @@
     },
     {
       "id": "stacked",
-      "name": "Stacked meals",
+      "name": "Two layers in one drawer",
       "icon": "stack",
-      "note": "Double Stack Pro, 450°F. Crisper plate in, bottom layer on it (1 lb frozen fries, tots or onion rings; 12 oz–1 lb Brussels sprouts, baby potatoes or green beans; or a head of broccoli or cauliflower), then the rack with the protein on top. Both baskets is the guide’s time; for one basket it says to cut 40–50%. Two vegetables stacked: hearty ones 45–50 min, delicate ones (green beans, asparagus) 35–40 min, added to the rack after 10 min.",
+      "note": "Double Stack Pro, 450°F, with the rack. In one drawer: crisper plate in, the bottom layer on it (1 lb frozen fries, tots or onion rings; 12 oz–1 lb Brussels sprouts, baby potatoes or green beans; or a head of broccoli or cauliflower), then the rack with the protein on top. The guide’s time is for stacked meals in both drawers; with only one drawer cooking it says to cut it by 40–50% (≈). Two vegetables stacked: hearty ones 45–50 min, delicate ones (green beans, asparagus) 35–40 min, added to the rack after 10 min.",
       "items": [
         {
           "name": "Chicken on top",
           "category": "stacked meal",
           "amount": "2 chicken breasts (6–8 oz each) or 4 bone-in skin-on thighs (6–8 oz each)",
-          "accessory": "Rack on top, crisper plate below",
+          "accessory": "Top layer on the rack; veggies or fries below on the crisper plate",
           "temp_f": 450,
           "time_min": 18,
           "time_max": 24,
@@ -858,7 +858,7 @@
           "name": "Pork chops on top",
           "category": "stacked meal",
           "amount": "4 boneless pork chops (5–6 oz each)",
-          "accessory": "Rack on top, crisper plate below",
+          "accessory": "Top layer on the rack; veggies or fries below on the crisper plate",
           "temp_f": 450,
           "time_min": 15,
           "time_max": 21,
@@ -876,7 +876,7 @@
           "name": "Steak on top",
           "category": "stacked meal",
           "amount": "1 strip steak, 16 oz, 1 1/2 inch thick",
-          "accessory": "Rack on top, crisper plate below",
+          "accessory": "Top layer on the rack; veggies or fries below on the crisper plate",
           "temp_f": 450,
           "time_min": 12,
           "time_max": 18,
@@ -894,7 +894,7 @@
           "name": "Salmon on top",
           "category": "stacked meal",
           "amount": "2 salmon fillets (6 oz each)",
-          "accessory": "Rack on top, crisper plate below",
+          "accessory": "Top layer on the rack; veggies or fries below on the crisper plate",
           "temp_f": 450,
           "time_min": 12,
           "time_max": 18,
@@ -912,7 +912,7 @@
           "name": "Frozen breaded chicken on top",
           "category": "stacked meal",
           "amount": "1 box (12 oz) frozen chicken tenders or frozen chicken nuggets",
-          "accessory": "Rack on top, crisper plate below",
+          "accessory": "Top layer on the rack; veggies or fries below on the crisper plate",
           "temp_f": 450,
           "time_min": 18,
           "time_max": 27,
@@ -923,7 +923,7 @@
           },
           "tips": [
             "Flip the protein halfway and shake the bottom layer",
-            "Don’t mix fresh and frozen in the same basket"
+            "Don’t mix fresh and frozen in the same drawer"
           ],
           "source": "S1"
         }
@@ -933,7 +933,7 @@
       "id": "dehydrate",
       "name": "Dehydrate",
       "icon": "sun",
-      "note": "Crisper plate, food in a single layer. Same time in either basket.",
+      "note": "Crisper plate, food in a single layer. Same time with one or both drawers.",
       "items": [
         {
           "name": "Apples",

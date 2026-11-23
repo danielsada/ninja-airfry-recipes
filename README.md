@@ -6,7 +6,7 @@ The quick start guides live in a drawer and Ninja's Speedi recipe builder is gon
 
 - **Speedi cook times** (`/speedi/`): every food from the quick start guide's Steam & Crisp, Air Fry, Steam and Dehydrate charts, plus the Steam & Bake recipes. Filter by function or type to search (`/`); the filter is kept in the URL.
 - **Speedi Meal builder** (`/speedi/meal-builder/`): a rebuild of Ninja Test Kitchen's retired [Speedi Recipe Builder](https://web.archive.org/web/20250906142114/https://ninjatestkitchen.com/speedi-recipe-builder/). Pick a base, protein, seasoning (up to 2), vegetables (up to 3) and toppings, and it writes the recipe: ingredients, liquid, temperature, time and steps, for 3–4 or 1–2 servings. Recipes have shareable links and can be saved in the browser.
-- **Double Stack cook times** (`/double-stack/`): the Double Stack XL (SL400 / SL401) chart with each food's time for one basket and for both baskets, stacked meals (rack on top) and Dehydrate.
+- **Double Stack cook times** (`/double-stack/`): the Double Stack XL (SL400 / SL401) chart with each food's time with one drawer or both drawers cooking, two-layer meals stacked in one drawer (rack on top) and Dehydrate. An explainer at the top (`layouts/_shortcodes/doublestack-modes.html`) separates the two.
 
 ## Running the project
 
@@ -53,7 +53,7 @@ The site uses the same theme and colours as [danielsada.tech](https://danielsada
 The cook charts come from `data/speedi.json` (Ninja Speedi) and `data/doublestack.json` (Ninja Double Stack), both rendered by `views/charts.html` (`params.data` in the page picks the file):
 
 - `sources`: where the numbers come from (listed on the About page).
-- `modes`: one entry per function (`id`, `name`, `icon`, `note`, `items`). Each item has `name`, `category`, `amount`, `prep`, `oil`, `liquid`, `accessory`, `temp_f` (or `setting`), `time_min`, `time_max`, `time_unit` (`min` by default, `hr` for Dehydrate), `tips`, `approx` (shows ≈) and `source`. Two-basket appliances add `dualzone` (the time with both baskets running) and name both time columns in `columns`. Leave out what doesn't apply.
+- `modes`: one entry per function (`id`, `name`, `icon`, `note`, `items`). Each item has `name`, `category`, `amount`, `prep`, `oil`, `liquid`, `accessory`, `temp_f` (or `setting`), `time_min`, `time_max`, `time_unit` (`min` by default, `hr` for Dehydrate), `tips`, `approx` (shows ≈) and `source`. Two-drawer appliances add `dualzone` (the time with both drawers cooking) and name both time columns in `columns`. Leave out what doesn't apply.
 `data/builder.json` drives the Speedi Meal builder:
 
 - `steps`: the five pickers (`id`, `key` into this file, `title`, `limit`: 1 = one choice, 0 = any number, `icon` prefix).

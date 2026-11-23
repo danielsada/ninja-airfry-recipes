@@ -22,7 +22,7 @@ disableKinds = ["taxonomy", "term", "rss"]
     wrapStandAloneImageWithinParagraph = false
 
 [params]
-  description = "Ninja air fryer cook times and temperatures. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one or both baskets."
+  description = "Ninja air fryer cook times and temperatures. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one drawer, both drawers or stacked."
   tagline = "Speedi & Double Stack cook times"
   logo = "images/DanielSadaLogo.png"
   favicon = "favicon.ico"   # no leading slash: relative to baseURL, which may be a sub-path
@@ -147,7 +147,7 @@ disableKinds = ["taxonomy", "term", "rss"]
     [menus.doublestack.params]
       icon = "chart"
   [[menus.doublestack]]
-    name = "Stacked meals"
+    name = "Two layers in one drawer"
     url = "/double-stack/#stacked"
     weight = 20
     [menus.doublestack.params]
