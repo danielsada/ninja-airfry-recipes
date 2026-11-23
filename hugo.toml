@@ -67,8 +67,6 @@ disableKinds = ["taxonomy", "term", "rss"]
   # The appliances this guide covers: the home page chooser (layouts/_partials/home/chooser.html).
   [[params.appliances]]
     name = "Ninja Speedi"
-    model = "Rapid Cooker & Air Fryer · SF300 series, 6 qt"
-    blurb = "One pot that steams and crisps: Steam & Crisp, Speedi Meals, Air Fry and more."
     page = "/speedi"
     svg = "speedi/appliances/speedi.svg"
     [[params.appliances.links]]
@@ -79,8 +77,6 @@ disableKinds = ["taxonomy", "term", "rss"]
       ref = "/speedi-meal-builder"
   [[params.appliances]]
     name = "Ninja Double Stack"
-    model = "DoubleStack XL 2-Basket Air Fryer · SL400 / SL401, 10 qt"
-    blurb = "Two drawers on top of each other, and a rack for two layers in one drawer."
     page = "/double-stack"
     svg = "speedi/appliances/doublestack.svg"
     [[params.appliances.links]]
