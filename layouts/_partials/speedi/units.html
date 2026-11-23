@@ -1,0 +1,6 @@
+{{- /* US / metric toggle for the cook charts and the meal builder. assets/js/speedi.js unhides it and rewrites the
+  page's °F, lb, oz, cups, qt and inches; the data files stay in Ninja's US units. Hidden without JavaScript. */ -}}
+<div class="units" role="group" aria-label="Units" hidden>
+  <button type="button" class="chip-b" data-units="us" aria-pressed="true">US <small>°F · lb</small></button>
+  <button type="button" class="chip-b" data-units="metric" aria-pressed="false">Metric <small>°C · g</small></button>
+</div>
