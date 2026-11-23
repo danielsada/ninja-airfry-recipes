@@ -1,0 +1,8 @@
+{{- /* The <li>s of the crumb bar from speedi/crumbs.html: earlier crumbs link, the page itself is marked current
+  (with id="crumb-page" so the scripts can move "current" to a crumb they append). */ -}}
+{{- $trail := partial "speedi/crumbs.html" . -}}
+{{- $last := sub (len $trail) 1 -}}
+{{- range $i, $c := $trail }}
+  {{- if eq $i $last }}<li><a href="{{ $c.url }}" id="crumb-page" aria-current="page">{{ $c.title }}</a></li>
+  {{- else }}<li><a href="{{ $c.url }}">{{ $c.title }}</a></li>{{ end }}
+{{- end -}}

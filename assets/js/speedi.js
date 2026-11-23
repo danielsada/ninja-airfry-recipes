@@ -20,6 +20,7 @@
     var empty = $('#chart-empty', charts), clear = $('.win__status [data-reset]', charts);
     var links = $$('.show a[data-mode]', charts), groups = $$('tbody[data-mode]', charts);
     var total = +charts.getAttribute('data-total');
+    var crumbF = $('#crumb-f', charts), crumbPage = $('#crumb-page', charts);
     var mode = '';
     var timer;
 
@@ -54,6 +55,11 @@
       var text = shown + (shown === 1 ? ' food' : ' foods');
       if (filtered) text = shown + ' of ' + total + ' foods' + (label ? ' · ' + label : '') + (raw ? ' matching “' + raw + '”' : '');
       status.textContent = text;
+      if (crumbF) {
+        crumbF.hidden = !mode;
+        crumbF.firstChild.textContent = label;
+        if (mode) crumbPage.removeAttribute('aria-current'); else crumbPage.setAttribute('aria-current', 'page');
+      }
       empty.hidden = shown > 0;
       clear.hidden = !filtered;
       charts.classList.toggle('is-filtered', filtered);
@@ -300,7 +306,7 @@
 
     /* ----- views ----- */
     var pageTitle = document.title, site = pageTitle.split(' · ').slice(-1)[0];
-    var crumbRecipe = $('#crumb-recipe', builder), crumbBuilder = $('#crumb-builder', builder);
+    var crumbRecipe = $('#crumb-recipe', builder), crumbBuilder = $('#crumb-page', builder);
     var show = function (s, focus) {
       state = s;
       write(s);

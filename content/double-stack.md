@@ -4,6 +4,8 @@ linkTitle: Double Stack cook times
 description: Ninja Double Stack XL cook times and temperatures. How long each food takes in one basket or both, and how long stacked meals take on the rack.
 url: /double-stack/
 params:
+  appliance_section: {title: Ninja Double Stack, ref: /double-stack}
+  crumb: Cook times
   view: charts
   data: doublestack
   icon: stack

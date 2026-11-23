@@ -11,8 +11,7 @@
   </header>
   <div class="win__loc">
     <nav class="crumbs" aria-label="Breadcrumb"><ol>
-      <li><a href="{{ site.Home.RelPermalink }}">{{ site.Params.crumbroot | default site.Title }}</a></li>
-      <li><a href="{{ .RelPermalink }}" id="crumb-builder" aria-current="page">{{ .Title }}</a></li>
+      {{ partial "speedi/crumb-items.html" . }}
       <li id="crumb-recipe" hidden><span aria-current="page">My Speedi recipe</span></li>
     </ol></nav>
   </div>

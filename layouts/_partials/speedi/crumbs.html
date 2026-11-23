@@ -1,0 +1,9 @@
+{{- /* Breadcrumb trail for a page: the site → the appliance (params.appliance_section: {title, ref}) → the page
+  (params.crumb, default its LinkTitle). Returns a slice of dict {title, url}. Used by the views' crumb bar and the
+  JSON-LD BreadcrumbList (hooks/head-end.html), so both always match. */ -}}
+{{- $trail := slice (dict "title" (site.Params.crumbroot | default site.Title) "url" site.Home.RelPermalink "abs" site.Home.Permalink) -}}
+{{- with .Params.appliance_section -}}
+  {{- with site.GetPage .ref }}{{ $trail = $trail | append (dict "title" $.Params.appliance_section.title "url" .RelPermalink "abs" .Permalink) }}{{ end -}}
+{{- end -}}
+{{- if not .IsHome }}{{ $trail = $trail | append (dict "title" (.Params.crumb | default .LinkTitle) "url" .RelPermalink "abs" .Permalink) }}{{ end -}}
+{{- return $trail -}}

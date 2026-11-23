@@ -17,7 +17,7 @@
     <p class="win__sub">{{ $total }} foods · {{ len $d.modes }} functions</p>
   </header>
   <div class="win__loc">
-    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="{{ site.Home.RelPermalink }}">{{ site.Params.crumbroot | default site.Title }}</a></li><li><a href="{{ .RelPermalink }}" aria-current="page">{{ .Title }}</a></li></ol></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><ol>{{ partial "speedi/crumb-items.html" . }}<li id="crumb-f" hidden><span aria-current="page"></span></li></ol></nav>
     <label class="show-sel" for="chart-sel"><span>Show</span><select id="chart-sel">
       <option value="">All functions ({{ $total }})</option>
       {{- range $d.modes }}<option value="{{ .id }}">{{ .name }} ({{ len .items }})</option>{{ end -}}

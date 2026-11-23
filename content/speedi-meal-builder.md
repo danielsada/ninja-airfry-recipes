@@ -5,6 +5,8 @@ description: Build a Ninja Speedi one-pot meal. Pick a base, protein, seasoning,
 url: /speedi/meal-builder/
 aliases: [/builder/]
 params:
+  appliance_section: {title: Ninja Speedi, ref: /speedi}
+  crumb: Speedi Meal builder
   view: builder
   icon: pot
   appliance: Ninja Speedi Rapid Cooker & Air Fryer

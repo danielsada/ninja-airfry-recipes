@@ -5,6 +5,8 @@ description: Every Ninja Speedi cook time in one searchable table. Temperatures,
 url: /speedi/
 aliases: [/charts/]
 params:
+  appliance_section: {title: Ninja Speedi, ref: /speedi}
+  crumb: Cook times
   view: charts
   data: speedi
   icon: chart
