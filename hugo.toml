@@ -50,23 +50,54 @@ disableKinds = ["taxonomy", "term", "rss"]
 
   [params.panel]
     width = "17rem"
-  # This site's own panel sections, below Places, in this order: one per appliance (menus.speedi, menus.doublestack),
-  # then menus.guide without a title (layouts/_partials/breeze/panel-projects.html).
+  # This site's own panel sections below Places, in order: the guide itself (menus.project: home, about), then one per
+  # appliance (menus.speedi, menus.doublestack). Rendered by layouts/_partials/breeze/panel-projects.html.
+  [[params.panel.sections]]
+    menu = "project"
+    title = "Ninja Air Fry Recipes"
   [[params.panel.sections]]
     menu = "speedi"
     title = "Ninja Speedi"
   [[params.panel.sections]]
     menu = "doublestack"
     title = "Ninja Double Stack"
-  [[params.panel.sections]]
-    menu = "guide"
 
   [params.rss]
     panel = false
 
+  # The appliances this guide covers: the home page chooser (layouts/_partials/home/chooser.html).
+  [[params.appliances]]
+    name = "Ninja Speedi"
+    model = "Rapid Cooker & Air Fryer · SF300 series, 6 qt"
+    blurb = "One pot that steams and crisps: Steam & Crisp, Speedi Meals, Air Fry and more."
+    page = "/speedi"
+    svg = "speedi/appliances/speedi.svg"
+    [[params.appliances.links]]
+      text = "Cook times"
+      ref = "/speedi"
+    [[params.appliances.links]]
+      text = "Speedi Meal builder"
+      ref = "/speedi-meal-builder"
+  [[params.appliances]]
+    name = "Ninja Double Stack"
+    model = "DoubleStack XL 2-Basket Air Fryer · SL400 / SL401, 10 qt"
+    blurb = "Two drawers on top of each other, and a rack for two layers in one drawer."
+    page = "/double-stack"
+    svg = "speedi/appliances/doublestack.svg"
+    [[params.appliances.links]]
+      text = "Cook times"
+      ref = "/double-stack"
+    [[params.appliances.links]]
+      text = "Two layers in one drawer"
+      ref = "/double-stack"
+      anchor = "stacked"
+
   [params.home]
     [[params.home.main]]
       widget = "intro"
+    [[params.home.main]]
+      widget = "chooser"
+      title = "Which Ninja do you have?"
     [[params.home.main]]
       widget = "modes"
       title = "Ninja Speedi cook times"
@@ -159,11 +190,17 @@ disableKinds = ["taxonomy", "term", "rss"]
     [menus.doublestack.params]
       icon = "fan"
 
-  [[menus.guide]]
+  [[menus.project]]
+    name = "Home: pick your Ninja"
+    pageRef = "/"
+    weight = 10
+    [menus.project.params]
+      icon = "home"
+  [[menus.project]]
     name = "About this guide"
     pageRef = "/about"
-    weight = 10
-    [menus.guide.params]
+    weight = 20
+    [menus.project.params]
       icon = "info"
   [[menus.social]]
     name = "GitHub"

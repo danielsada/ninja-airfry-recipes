@@ -41,10 +41,10 @@ The site uses the same theme and colours as [danielsada.tech](https://danielsada
 | Identity, colours, home widgets | `hugo.toml` (`[params]`) |
 | Logo links to danielsada.tech (`params.mainsite`); this site's home is the first breadcrumb | `layouts/_partials/breeze/identity.html` (override of the theme's) |
 | **Places**: kept identical to danielsada.tech (absolute links) | `hugo.toml` (`[[menus.main]]`) |
-| One panel section per appliance below Places (Ninja Speedi, Ninja Double Stack) | `hugo.toml` (`[[params.panel.sections]]` + `[[menus.speedi]]`, `[[menus.doublestack]]`, `[[menus.guide]]`), rendered by `layouts/_partials/breeze/panel-projects.html` |
+| Panel sections below Places: the guide (home, about), then one per appliance | `hugo.toml` (`[[params.panel.sections]]` + `[[menus.project]]`, `[[menus.speedi]]`, `[[menus.doublestack]]`), rendered by `layouts/_partials/breeze/panel-projects.html` |
 | Cook charts and builder views | `layouts/_partials/views/charts.html`, `views/builder.html` (picked by `params.view` in `content/speedi.md`, `content/double-stack.md`, `content/speedi-meal-builder.md`) |
 | SEO: JSON-LD, keywords, robots.txt, social card | `layouts/_partials/hooks/head-end.html`, `layouts/robots.txt`, `assets/images/og.png` |
-| Home widgets | `layouts/_partials/home/{modes,builder,mainsite}.html` |
+| Home widgets, incl. the "Which Ninja do you have?" chooser (`[[params.appliances]]`, drawings in `assets/speedi/appliances/`) | `layouts/_partials/home/{chooser,modes,builder,mainsite}.html` |
 | Chart filter and builder script | `assets/js/speedi.js` (loaded by `layouts/_partials/hooks/body-end.html`) |
 | Extra CSS | `assets/css/custom.css` (theme tokens only, so light/dark follow the theme) |
 | Extra icons | `assets/breeze/icons/*.svg` |
