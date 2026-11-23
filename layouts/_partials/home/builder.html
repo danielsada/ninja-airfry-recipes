@@ -1,6 +1,6 @@
 {{- /* Home: Speedi Meal builder teaser with the builder's example meals as presets. cfg: title. */ -}}
 {{- $cfg := .cfg -}}
-{{- with site.GetPage "/builder" }}{{ $b := . }}
+{{- with site.GetPage "/speedi-meal-builder" }}{{ $b := . }}
 <section class="card card--note" aria-labelledby="bld-h">
   <div class="card-h"><h2 id="bld-h">{{ $cfg.title | default .Title }}</h2></div>
   <p>Pick a base, a protein, seasoning, vegetables and toppings, and get a one-pot recipe: base and liquid in the pot, protein on the Crisper Tray above it.</p>

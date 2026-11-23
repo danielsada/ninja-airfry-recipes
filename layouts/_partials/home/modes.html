@@ -1,10 +1,13 @@
-{{- /* Home: every cook-chart function with its number of foods (data/speedi.json "modes"). cfg: title. */ -}}
+{{- /* Home: an appliance's cook-chart functions with their number of foods. cfg: page (content path, e.g. "/speedi"),
+  data (data file, e.g. "speedi"), title. */ -}}
 {{- $cfg := .cfg -}}
-{{- with site.GetPage "/charts" }}{{ $charts := . -}}
-<section class="card recent seriescard" aria-labelledby="modes-h">
-  <div class="card-h"><h2 id="modes-h">{{ $cfg.title | default "Cook charts" }}</h2><a href="{{ $charts.RelPermalink }}">All charts →</a></div>
+{{- with site.GetPage $cfg.page }}{{ $charts := . -}}
+{{- $d := index hugo.Data $cfg.data -}}
+{{- $id := printf "modes-%s-h" $cfg.data }}
+<section class="card recent seriescard" aria-labelledby="{{ $id }}">
+  <div class="card-h"><h2 id="{{ $id }}">{{ $cfg.title | default .LinkTitle }}</h2><a href="{{ $charts.RelPermalink }}">All times →</a></div>
   <ul>
-    {{- range hugo.Data.speedi.modes }}
+    {{- range $d.modes }}
     <li><a href="{{ $charts.RelPermalink }}#{{ .id }}">{{ partial "breeze/icon.html" (.icon | default "temp") }}<span>{{ .name }}</span><span class="parts">{{ len .items }} {{ cond (eq (len .items) 1) "food" "foods" }}</span></a></li>
     {{- end }}
   </ul>

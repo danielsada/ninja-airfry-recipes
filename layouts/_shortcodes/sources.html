@@ -1,8 +1,12 @@
-{{- /* Lists data/speedi.json "sources" (where the chart numbers come from). Usage: {{< sources >}} */ -}}
-{{- with hugo.Data.speedi.sources }}
+{{- /* Lists the "sources" of the given data files (default: all appliance charts). Usage: {{< sources >}} or {{< sources "speedi" >}} */ -}}
+{{- $files := cond (gt (len .Params) 0) .Params (slice "speedi" "doublestack") -}}
+{{- $seen := dict -}}
 <ul>
-  {{- range . }}
+{{- range $files }}
+  {{- range (index hugo.Data .).sources }}
+    {{- if not (index $seen .url) }}{{ $seen = merge $seen (dict .url true) }}
   <li><a href="{{ .url }}">{{ .title }}</a></li>
+    {{- end }}
   {{- end }}
-</ul>
 {{- end }}
+</ul>

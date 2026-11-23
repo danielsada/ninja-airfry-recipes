@@ -1,0 +1,23 @@
+{{- /* Site hook (theme: layouts/_partials/hooks/head-end.html): search-engine extras.
+  Schema.org JSON-LD: home → WebSite + Person; every other page → WebPage (about the appliance in params.appliance)
+  + BreadcrumbList; the meal builder → WebApplication too. Keywords from params.keywords. */ -}}
+{{- $author := site.Params.author | default (dict) -}}
+{{- $person := dict "@type" "Person" "name" ($author.name | default site.Title) "url" (site.Params.mainsite | default site.Home.Permalink) -}}
+{{- $graph := slice -}}
+{{- if .IsHome -}}
+  {{- $graph = $graph | append (dict "@type" "WebSite" "@id" (print site.Home.Permalink "#website") "url" site.Home.Permalink "name" site.Title "description" site.Params.description "inLanguage" site.Language.Locale "author" $person) -}}
+{{- else -}}
+  {{- $page := dict "@type" "WebPage" "@id" .Permalink "url" .Permalink "name" .Title "description" .Description "inLanguage" site.Language.Locale "isPartOf" (dict "@type" "WebSite" "name" site.Title "url" site.Home.Permalink) "author" $person -}}
+  {{- with .Params.appliance }}{{ $page = merge $page (dict "about" (dict "@type" "Product" "name" . "brand" (dict "@type" "Brand" "name" "Ninja"))) }}{{ end -}}
+  {{- $graph = $graph | append $page -}}
+  {{- $graph = $graph | append (dict "@type" "BreadcrumbList" "itemListElement" (slice
+      (dict "@type" "ListItem" "position" 1 "name" site.Title "item" site.Home.Permalink)
+      (dict "@type" "ListItem" "position" 2 "name" .LinkTitle "item" .Permalink))) -}}
+  {{- if eq .Params.view "builder" -}}
+    {{- $graph = $graph | append (dict "@type" "WebApplication" "name" .Title "url" .Permalink "description" .Description "applicationCategory" "LifestyleApplication" "operatingSystem" "Any (web browser)" "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "USD")) -}}
+  {{- end -}}
+{{- end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>
+{{- with .Params.keywords | default site.Params.keywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end }}

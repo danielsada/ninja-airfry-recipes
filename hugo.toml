@@ -1,8 +1,8 @@
-# Ninja Speedi Guide: Hugo site config. Theme: themes/hugo-breeze-plasma-inspired-theme (vendored copy, the same
+# Ninja Air Fry Recipes: Hugo site config. Theme: themes/hugo-breeze-plasma-inspired-theme (vendored copy, the same
 # theme and settings as danielsada.tech so both sites look and navigate alike; see README.md).
 # Requires Hugo >= 0.158 (built and deployed with 0.170.1).
-baseURL = "https://danielsada.github.io/ninja-speedi/"
-title = "Ninja Speedi Guide"
+baseURL = "https://danielsada.github.io/ninja-airfry-recipes/"
+title = "Ninja Air Fry Recipes"
 theme = "hugo-breeze-plasma-inspired-theme"
 locale = "en-US"
 defaultContentLanguage = "en"
@@ -22,16 +22,16 @@ disableKinds = ["taxonomy", "term", "rss"]
     wrapStandAloneImageWithinParagraph = false
 
 [params]
-  description = "Cook times, temperatures, liquid amounts and a Speedi Meal builder for the Ninja Speedi Rapid Cooker & Air Fryer."
-  tagline = "Cook charts & Speedi Meals"
+  description = "Ninja air fryer cook times and temperatures. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one or both baskets."
+  tagline = "Speedi & Double Stack cook times"
   logo = "images/DanielSadaLogo.png"
   favicon = "favicon.ico"   # no leading slash: relative to baseURL, which may be a sub-path
-  ogimage = "images/DanielSadaLogo.png"
-  crumbroot = "Ninja Speedi"
+  ogimage = "images/og.png"   # 1200x630 social card (assets/images/og.png)
+  crumbroot = "Ninja Air Fry Recipes"
   colorscheme = "auto"
   # The main site; linked from Places and the About page.
   mainsite = "https://danielsada.tech/"
-  repo = "https://github.com/danielsada/ninja-speedi"
+  repo = "https://github.com/danielsada/ninja-airfry-recipes"
   [params.author]
     name = "Daniel Sada"
     email = "hello@danielsada.tech"
@@ -52,7 +52,7 @@ disableKinds = ["taxonomy", "term", "rss"]
     width = "17rem"
   # Title of this site's own section in the panel, below Places (menus.app).
   [params.panel.app]
-    title = "Ninja Speedi"
+    title = "Ninja air fryers"
 
   [params.rss]
     panel = false
@@ -62,7 +62,14 @@ disableKinds = ["taxonomy", "term", "rss"]
       widget = "intro"
     [[params.home.main]]
       widget = "modes"
-      title = "Cook charts"
+      title = "Ninja Speedi cook times"
+      page = "/speedi"
+      data = "speedi"
+    [[params.home.main]]
+      widget = "modes"
+      title = "Ninja Double Stack cook times"
+      page = "/double-stack"
+      data = "doublestack"
     [[params.home.side]]
       widget = "builder"
       title = "Speedi Meal builder"
@@ -107,21 +114,27 @@ disableKinds = ["taxonomy", "term", "rss"]
 
   # This site's own pages: a second panel section below Places (layouts/_partials/breeze/panel-projects.html).
   [[menus.app]]
-    name = "Cook charts"
-    pageRef = "/charts"
+    name = "Speedi cook times"
+    pageRef = "/speedi"
     weight = 10
     [menus.app.params]
       icon = "chart"
   [[menus.app]]
     name = "Speedi Meal builder"
-    pageRef = "/builder"
+    pageRef = "/speedi-meal-builder"
     weight = 20
     [menus.app.params]
       icon = "pot"
   [[menus.app]]
+    name = "Double Stack cook times"
+    pageRef = "/double-stack"
+    weight = 30
+    [menus.app.params]
+      icon = "stack"
+  [[menus.app]]
     name = "About this guide"
     pageRef = "/about"
-    weight = 30
+    weight = 40
     [menus.app.params]
       icon = "info"
   [[menus.social]]

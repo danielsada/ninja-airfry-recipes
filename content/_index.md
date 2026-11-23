@@ -1,15 +1,15 @@
 ---
-title: Ninja Speedi Guide
-description: Cook times, temperatures, liquid amounts and a Speedi Meal builder for the Ninja Speedi Rapid Cooker & Air Fryer.
+title: Ninja Air Fry Recipes
+description: Ninja air fryer cook times and temperatures. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one or both baskets.
 params:
-  kicker: Ninja Speedi Guide
-  heading: Everything I cook in my Ninja Speedi.
+  kicker: Ninja Air Fry Recipes
+  heading: How long to cook it in my Ninja.
   links:
-    - ref: /charts
-      text: Cook charts
-    - ref: /builder
+    - ref: /speedi
+      text: Speedi cook times
+    - ref: /speedi-meal-builder
       text: Build a Speedi Meal
-    - ref: /about
-      text: About this guide
+    - ref: /double-stack
+      text: Double Stack cook times
 ---
-I love my Ninja Speedi, but the quick start guide lives in a drawer and the times I actually use were scattered around. This is one place for the cook charts, the liquid amounts for Speedi Meals, and a small builder that turns *base + protein + veg* into steps.
+I cook with two Ninja air fryers, a **Ninja Speedi** and a **Ninja Double Stack**, and their quick start guides live in a drawer. This is one place for every cook time and temperature, the liquid amounts for Speedi Meals, a builder that turns *base + protein + veg* into a recipe, and Double Stack times for one basket, both baskets or a stacked meal.

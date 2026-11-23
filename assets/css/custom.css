@@ -2,6 +2,21 @@
    Only the theme's tokens (--card, --card-2, --line, --field, --accent-*, --muted…) so light/dark and the
    accent colours stay in step with danielsada.tech. */
 
+@container win (max-width: 959px) {
+  .posts.speedi.stacked tbody tr:not(.yr) { grid-template-columns: minmax(0, 1fr) 4.75rem 6.25rem 7.5rem; }
+  .posts.speedi.stacked tbody td.st2 { grid-column: 4; grid-row: 1 / span 3; padding-top: 2px; }
+  .posts.speedi.stacked tbody td.tm::before, .posts.speedi.stacked tbody td.st2::before { content: attr(data-label); display: block; font-size: .6875rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+}
+@container win (max-width: 679px) {
+  .posts.speedi.stacked tbody tr:not(.yr) { grid-template-columns: auto auto minmax(0, 1fr); gap: 0 18px; }
+  .posts.speedi.stacked tbody td.nm { grid-column: 1 / -1; grid-row: 1; }
+  .posts.speedi.stacked tbody td.tp { grid-column: 1; grid-row: 2; align-self: end; padding: 4px 0 6px; }
+  .posts.speedi.stacked tbody td.tm { grid-column: 2; grid-row: 2; padding: 4px 0 6px; }
+  .posts.speedi.stacked tbody td.st2 { grid-column: 3; grid-row: 2; padding: 4px 0 6px; font-size: .875rem; }
+  .posts.speedi.stacked tbody td.am { grid-column: 1 / -1; grid-row: 3; width: auto; }
+  .posts.speedi.stacked tbody td.lq { grid-column: 1 / -1; grid-row: 4; width: auto; }
+}
+
 /* ---------- Panel: this site's own section (menus.app), below the shared Places ---------- */
 .appnav { padding-top: 10px; border-top: 1px solid var(--line); }
 
@@ -19,6 +34,12 @@
 .posts.speedi .yr .d { margin: 4px 0 0 1.875rem; font-weight: 400; }
 .posts.speedi tbody tr:not(.yr):hover td { background: var(--accent-soft); }
 .charts [hidden] { display: none !important; }
+/* Double Stack: single layer and double stacked times side by side */
+.posts.speedi .st2 { width: 9rem; }
+.posts.speedi td.st2 { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--accent-ink); }
+.posts.speedi td.st2 .d { font-weight: 400; }
+.posts.speedi td.st2 .no { font-weight: 600; color: var(--muted); }
+.posts.speedi.stacked .lq { width: 12%; }
 
 @container win (max-width: 959px) {
   .posts.speedi thead { display: none; }

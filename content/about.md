@@ -1,21 +1,23 @@
 ---
 title: About this guide
-description: Why this Ninja Speedi guide exists, where its numbers come from, and how to suggest a fix.
+description: Why this Ninja air fryer guide exists, where its cook times come from, and how to suggest a fix.
 params:
   sayhi: true
 ---
-I love my [Ninja Speedi](https://www.ninjakitchen.com/), but the quick start guide lives in a drawer, the recipe builder on Ninja's site is gone, and the times I actually cook with were scattered across notes. This site keeps them in one place: the cook charts for every function, the base and liquid amounts for Speedi Meals, and a [Speedi Meal builder](/builder/) that rebuilds Ninja's retired recipe builder: pick a base, protein, seasoning, vegetables and toppings and get the recipe.
+I cook with two Ninja air fryers, a [Ninja Speedi](/speedi/) and a [Ninja Double Stack](/double-stack/). Their quick start guides live in a drawer, Ninja's Speedi recipe builder is gone, and the times I actually cook with were scattered across notes. This site keeps them in one place: every cook time and temperature for both, the base and liquid amounts for Speedi Meals, a [Speedi Meal builder](/speedi/meal-builder/) that rebuilds Ninja's retired recipe builder, and Double Stack times for one basket, both baskets or a stacked meal.
 
 It's a side project of [danielsada.tech](https://danielsada.tech/), built with Hugo and the same theme, so you can hop between the two.
 
 ## Where the numbers come from
 
-The charts and the Speedi Meal tables follow Ninja's quick start guide for the Speedi (SF300 series, 6 qt). The plain-pasta, tomato-sauce and potato bases come from the UK edition, converted to US units, and the done temperatures are the USDA's. The builder's ingredient options are the ones from Ninja's archived recipe builder; where the guide has no number for one of them, the recipe says so and explains the estimate.
+- **Ninja Speedi:** Ninja's quick start guide for the Speedi (SF300 series, 6 qt). The plain-pasta, tomato-sauce and potato bases come from the UK edition, converted to US units. The builder's ingredient options are the ones from Ninja's archived recipe builder; where the guide has no number for one of them, the recipe says so and explains the estimate.
+- **Ninja Double Stack:** Ninja's quick start guide for the Double Stack XL (SL400 / SL401, 10 qt). The guide gives stacked-meal times with both baskets running; the one-basket stacked times apply its "cut the time by 40–50%" rule, so they're marked ≈. The 8-quart Double Stack (SL201) has its own chart, which isn't here yet.
+- **Done temperatures:** the USDA's.
 
 {{< sources >}}
 
-Times are guides: thickness, starting temperature and how full the pot is all change them. Check meat and fish with a thermometer. This guide isn't affiliated with or endorsed by SharkNinja; *Ninja*, *Speedi* and *Rapid Cooker* are their trademarks.
+Times are guides: thickness, starting temperature and how full the basket is all change them. Check meat and fish with a thermometer. This guide isn't affiliated with or endorsed by SharkNinja; *Ninja*, *Speedi*, *DoubleStack* and *Rapid Cooker* are their trademarks.
 
 ## Fixes and additions
 
-The data is one JSON file, [`data/speedi.json`](https://github.com/danielsada/ninja-speedi/blob/main/data/speedi.json). Open an issue or a pull request on [GitHub](https://github.com/danielsada/ninja-speedi) if a time is off or something you cook is missing.
+The data is in [`data/`](https://github.com/danielsada/ninja-airfry-recipes/tree/main/data): `speedi.json`, `builder.json` and `doublestack.json`. Open an issue or a pull request on [GitHub](https://github.com/danielsada/ninja-airfry-recipes) if a time is off or something you cook is missing.
