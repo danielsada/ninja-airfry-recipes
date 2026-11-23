@@ -19,6 +19,7 @@
 
 /* ---------- Panel: this site's own section (menus.app), below the shared Places ---------- */
 .appnav { padding-top: 10px; border-top: 1px solid var(--line); }
+.appnav--plain { padding-top: 6px; }
 
 /* ---------- Cook charts: the theme's details view with Food | Amount | Temp | Time | Liquid ---------- */
 .posts.speedi td.nm::before { content: none; }

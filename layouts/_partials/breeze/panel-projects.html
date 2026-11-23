@@ -1,16 +1,21 @@
 {{- /* Site override of the theme's panel-projects.html: the slot right below Places in the panel (this site doesn't use
-  the theme's Projects box). Renders this site's own pages ([[menus.app]]) as a second Places-style section, so
-  Places itself can stay identical to danielsada.tech. Title: params.panel.app.title. Context dict: page, isPost. */ -}}
+  the theme's Projects box). Renders this site's own sections from params.panel.sections ({menu, title}), each a
+  Places-style list of [[menus.<menu>]], so Places itself can stay identical to danielsada.tech. A section without a
+  title is a plain list. Links with a #fragment (a function on a chart page) are never marked current. Context dict: page, isPost. */ -}}
 {{- $p := .page -}}
-{{- with site.Menus.app }}
-{{- $cfg := (site.Params.panel | default (dict)).app | default (dict) }}
-<nav class="appnav" aria-labelledby="app-h">
-  <h2 class="ph" id="app-h">{{ $cfg.title | default site.Title }}</h2>
+{{- range $i, $s := (site.Params.panel | default (dict)).sections }}
+{{- with index site.Menus $s.menu }}
+{{- $id := printf "app-%s-h" $s.menu }}
+<nav class="appnav{{ if not $s.title }} appnav--plain{{ end }}"{{ with $s.title }} aria-labelledby="{{ $id }}"{{ else }} aria-label="{{ site.Title }}"{{ end }}>
+  {{- with $s.title }}
+  <h2 class="ph" id="{{ $id }}">{{ . }}</h2>
+  {{- end }}
   <ul class="nav">
   {{- range . }}
-    {{- $cur := or ($p.IsMenuCurrent "app" .) (and .Page (eq .Page.RelPermalink $p.RelPermalink)) }}
+    {{- $cur := and (not (strings.Contains .URL "#")) (or ($p.IsMenuCurrent $s.menu .) (and .Page (eq .Page.RelPermalink $p.RelPermalink))) }}
     <li><a href="{{ .URL }}"{{ if $cur }} aria-current="page"{{ end }}>{{ partial "breeze/icon.html" (.Params.icon | default "folder") }}{{ .Name }}</a></li>
   {{- end }}
   </ul>
 </nav>
+{{- end }}
 {{- end }}

@@ -29,7 +29,7 @@ The site uses the same theme and colours as [danielsada.tech](https://danielsada
 |---|---|
 | Identity, colours, home widgets | `hugo.toml` (`[params]`) |
 | **Places**: kept identical to danielsada.tech (absolute links) | `hugo.toml` (`[[menus.main]]`) |
-| This site's pages, a second panel section below Places | `hugo.toml` (`[[menus.app]]`), rendered by `layouts/_partials/breeze/panel-projects.html` |
+| One panel section per appliance below Places (Ninja Speedi, Ninja Double Stack) | `hugo.toml` (`[[params.panel.sections]]` + `[[menus.speedi]]`, `[[menus.doublestack]]`, `[[menus.guide]]`), rendered by `layouts/_partials/breeze/panel-projects.html` |
 | Cook charts and builder views | `layouts/_partials/views/charts.html`, `views/builder.html` (picked by `params.view` in `content/speedi.md`, `content/double-stack.md`, `content/speedi-meal-builder.md`) |
 | SEO: JSON-LD, keywords, robots.txt, social card | `layouts/_partials/hooks/head-end.html`, `layouts/robots.txt`, `assets/images/og.png` |
 | Home widgets | `layouts/_partials/home/{modes,builder,mainsite}.html` |

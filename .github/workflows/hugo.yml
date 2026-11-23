@@ -51,6 +51,8 @@ jobs:
             bad=$(grep -rhoE '(href|src)="/[^"]*"' public --include='*.html' \
                   | grep -vE "=\"${BASE_PATH}/" | sort -u || true)
             if [ -n "$bad" ]; then echo "Links missing ${BASE_PATH}:"; echo "$bad"; exit 1; fi
+            twice=$(grep -rhoE "(href|src)=\"?${BASE_PATH}${BASE_PATH}/[^\" >]*" public --include='*.html' | sort -u || true)
+            if [ -n "$twice" ]; then echo "Links with ${BASE_PATH} twice:"; echo "$twice"; exit 1; fi
           fi
 
       - uses: actions/upload-pages-artifact@v3

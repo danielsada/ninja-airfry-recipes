@@ -50,9 +50,16 @@ disableKinds = ["taxonomy", "term", "rss"]
 
   [params.panel]
     width = "17rem"
-  # Title of this site's own section in the panel, below Places (menus.app).
-  [params.panel.app]
-    title = "Ninja air fryers"
+  # This site's own panel sections, below Places, in this order: one per appliance (menus.speedi, menus.doublestack),
+  # then menus.guide without a title (layouts/_partials/breeze/panel-projects.html).
+  [[params.panel.sections]]
+    menu = "speedi"
+    title = "Ninja Speedi"
+  [[params.panel.sections]]
+    menu = "doublestack"
+    title = "Ninja Double Stack"
+  [[params.panel.sections]]
+    menu = "guide"
 
   [params.rss]
     panel = false
@@ -112,30 +119,51 @@ disableKinds = ["taxonomy", "term", "rss"]
     [menus.main.params]
       icon = "mail"
 
-  # This site's own pages: a second panel section below Places (layouts/_partials/breeze/panel-projects.html).
-  [[menus.app]]
-    name = "Speedi cook times"
+  # This site's own pages, one panel section per appliance (see params.panel.sections). Links with a #fragment jump to
+  # a function on the chart page.
+  [[menus.speedi]]
+    name = "Cook times"
     pageRef = "/speedi"
     weight = 10
-    [menus.app.params]
+    [menus.speedi.params]
       icon = "chart"
-  [[menus.app]]
+  [[menus.speedi]]
     name = "Speedi Meal builder"
     pageRef = "/speedi-meal-builder"
     weight = 20
-    [menus.app.params]
+    [menus.speedi.params]
       icon = "pot"
-  [[menus.app]]
-    name = "Double Stack cook times"
-    pageRef = "/double-stack"
+  [[menus.speedi]]
+    name = "Steam & Crisp"
+    url = "/speedi/#steam-crisp"
     weight = 30
-    [menus.app.params]
+    [menus.speedi.params]
+      icon = "steam"
+
+  [[menus.doublestack]]
+    name = "Cook times"
+    pageRef = "/double-stack"
+    weight = 10
+    [menus.doublestack.params]
+      icon = "chart"
+  [[menus.doublestack]]
+    name = "Stacked meals"
+    url = "/double-stack/#stacked"
+    weight = 20
+    [menus.doublestack.params]
       icon = "stack"
-  [[menus.app]]
+  [[menus.doublestack]]
+    name = "Air Fry"
+    url = "/double-stack/#air-fry"
+    weight = 30
+    [menus.doublestack.params]
+      icon = "fan"
+
+  [[menus.guide]]
     name = "About this guide"
     pageRef = "/about"
-    weight = 40
-    [menus.app.params]
+    weight = 10
+    [menus.guide.params]
       icon = "info"
   [[menus.social]]
     name = "GitHub"
