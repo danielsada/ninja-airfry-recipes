@@ -1,6 +1,6 @@
 ---
 title: Ninja Air Fry Recipes
-description: Ninja air fryer cook times and temperatures. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one drawer, both drawers or stacked.
+description: Ninja air fryer cook times. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one drawer, both drawers or stacked.
 params:
   kicker: Ninja Air Fry Recipes
   heading: How long to cook it in my Ninja.

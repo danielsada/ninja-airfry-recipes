@@ -2,7 +2,14 @@
   Schema.org JSON-LD: home → WebSite + Person; every other page → WebPage (about the appliance in params.appliance)
   + BreadcrumbList; the meal builder → WebApplication too. Keywords from params.keywords. */ -}}
 {{- $author := site.Params.author | default (dict) -}}
-{{- $person := dict "@type" "Person" "name" ($author.name | default site.Title) "url" (site.Params.mainsite | default site.Home.Permalink) -}}
+{{- /* The Person is the blog's (url = params.homeurl, sameAs = the http(s) links of [[menus.social]] that aren't on the blog),
+  so it matches danielsada.tech's own Person node. */ -}}
+{{- $main := site.Params.homeurl | default site.Home.Permalink -}}
+{{- $mainHost := (urls.Parse $main).Host -}}
+{{- $sameAs := slice -}}
+{{- range site.Menus.social }}{{ if and (strings.HasPrefix .URL "http") (ne (urls.Parse .URL).Host $mainHost) }}{{ $sameAs = $sameAs | append .URL }}{{ end }}{{ end -}}
+{{- $person := dict "@type" "Person" "@id" (print $main "#person") "name" ($author.name | default site.Title) "url" $main -}}
+{{- with $sameAs }}{{ $person = merge $person (dict "sameAs" .) }}{{ end -}}
 {{- $graph := slice -}}
 {{- if .IsHome -}}
   {{- $graph = $graph | append (dict "@type" "WebSite" "@id" (print site.Home.Permalink "#website") "url" site.Home.Permalink "name" site.Title "description" site.Params.description "inLanguage" site.Language.Locale "author" $person) -}}

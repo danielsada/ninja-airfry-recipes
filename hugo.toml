@@ -22,15 +22,14 @@ disableKinds = ["taxonomy", "term", "rss"]
     wrapStandAloneImageWithinParagraph = false
 
 [params]
-  description = "Ninja air fryer cook times and temperatures. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one drawer, both drawers or stacked."
+  description = "Ninja air fryer cook times. Ninja Speedi cook charts and Speedi Meal builder, and Ninja Double Stack times for one drawer, both drawers or stacked."
   tagline = "Speedi & Double Stack cook times"
   logo = "images/DanielSadaLogo.png"
   favicon = "favicon.ico"   # no leading slash: relative to baseURL, which may be a sub-path
   ogimage = "images/og.png"   # 1200x630 social card (assets/images/og.png)
   crumbroot = "Ninja Air Fry Recipes"
   colorscheme = "auto"
-  # The main site; linked from Places and the About page.
-  mainsite = "https://danielsada.tech/"
+  homeurl = "https://danielsada.tech/"   # the panel logo links back to the blog (theme param)
   repo = "https://github.com/danielsada/ninja-airfry-recipes"
   [params.author]
     name = "Daniel Sada"
@@ -202,6 +201,8 @@ disableKinds = ["taxonomy", "term", "rss"]
     weight = 20
     [menus.project.params]
       icon = "info"
+  # SHARED: Elsewhere, the same as danielsada.tech, with the blog's feed. Its http(s) links are also the JSON-LD
+  # Person's sameAs (layouts/_partials/hooks/head-end.html).
   [[menus.social]]
     name = "GitHub"
     url = "https://github.com/danielsada"
@@ -215,8 +216,14 @@ disableKinds = ["taxonomy", "term", "rss"]
     [menus.social.params]
       icon = "linkedin"
   [[menus.social]]
-    name = "X (Twitter)"
-    url = "https://x.com/danielsadac"
+    name = "Fediverse"
+    url = "https://infosec.exchange/@dsada"
     weight = 30
     [menus.social.params]
-      icon = "x"
+      icon = "globe"
+  [[menus.social]]
+    name = "RSS feed"
+    url = "https://danielsada.tech/index.xml"
+    weight = 40
+    [menus.social.params]
+      icon = "rss"
