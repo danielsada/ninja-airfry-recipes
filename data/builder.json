@@ -1,0 +1,1180 @@
+{
+  "temp_default_f": 390,
+  "time_min": 10,
+  "time_max": 15,
+  "oil": "1–2 tbsp oil",
+  "steps": [
+    {
+      "id": "base",
+      "key": "bases",
+      "label": "Bases",
+      "title": "Pick your base",
+      "hint": "Goes in the bottom of the pot with the liquid.",
+      "limit": 1,
+      "icon": "base"
+    },
+    {
+      "id": "protein",
+      "key": "proteins",
+      "label": "Proteins",
+      "title": "Pick your protein",
+      "hint": "Cooks on the Crisper Tray above the base.",
+      "limit": 1,
+      "icon": "protein"
+    },
+    {
+      "id": "seasoning",
+      "key": "seasonings",
+      "label": "Seasoning",
+      "title": "Pick your seasoning",
+      "hint": "Up to 2.",
+      "limit": 2,
+      "icon": "seasoning"
+    },
+    {
+      "id": "vegetables",
+      "key": "vegetables",
+      "label": "Vegetables",
+      "title": "Pick your vegetables",
+      "hint": "Up to 3.",
+      "limit": 3,
+      "icon": "veg"
+    },
+    {
+      "id": "toppings",
+      "key": "toppings",
+      "label": "Toppings",
+      "title": "Pick your toppings",
+      "hint": "As many as you like.",
+      "limit": 0,
+      "icon": "topping"
+    }
+  ],
+  "notes": [
+    "Times are for well-done proteins. Thicker cuts need 3–5 minutes more, which may overcook the grains.",
+    "If the base still needs time, switch to Sear/Sauté with the lid open until the liquid is absorbed."
+  ],
+  "examples": [
+    {
+      "name": "Burrito bowl",
+      "base": [
+        "white-rice"
+      ],
+      "protein": [
+        "chicken-breast"
+      ],
+      "seasoning": [
+        "taco"
+      ],
+      "vegetables": [
+        "black-beans",
+        "corn"
+      ],
+      "toppings": [
+        "salsa",
+        "avocado",
+        "sour-cream"
+      ]
+    },
+    {
+      "name": "Mediterranean bowl",
+      "base": [
+        "quinoa"
+      ],
+      "protein": [
+        "meatballs"
+      ],
+      "seasoning": [
+        "greek"
+      ],
+      "vegetables": [
+        "spinach",
+        "cherry-tomatoes"
+      ],
+      "toppings": [
+        "tzatziki"
+      ]
+    },
+    {
+      "name": "Salmon with quinoa & peas",
+      "base": [
+        "quinoa"
+      ],
+      "protein": [
+        "salmon"
+      ],
+      "seasoning": [
+        "citrus"
+      ],
+      "vegetables": [
+        "frozen-peas"
+      ],
+      "toppings": [
+        "herbs"
+      ]
+    },
+    {
+      "name": "Chicken broccoli Alfredo",
+      "base": [
+        "pasta-alfredo"
+      ],
+      "protein": [
+        "chicken-breast"
+      ],
+      "seasoning": [
+        "italian"
+      ],
+      "vegetables": [
+        "broccoli"
+      ],
+      "toppings": [
+        "cheese"
+      ]
+    }
+  ],
+  "bases": [
+    {
+      "id": "mac-cheese",
+      "name": "Boxed mac & cheese",
+      "title": "Mac & Cheese",
+      "amount": {
+        "qty": 1,
+        "unit": "box (7 1/4 oz)",
+        "units": "boxes (7 1/4 oz each)",
+        "what": "macaroni & cheese"
+      },
+      "liquid": [
+        {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water"
+        }
+      ],
+      "steam": "about 15",
+      "pasta": true,
+      "finish": "Stir in the cheese packet.",
+      "source": "us_qsg"
+    },
+    {
+      "id": "boxed-rice",
+      "name": "Boxed rice",
+      "title": "Rice",
+      "amount": {
+        "qty": 1,
+        "unit": "box",
+        "units": "boxes",
+        "what": "rice mix (pilaf, Spanish, rice & beans)"
+      },
+      "liquid": [],
+      "liquid_text": "the water and seasoning on the box",
+      "source": "us_qsg"
+    },
+    {
+      "id": "riced-cauliflower",
+      "name": "Frozen riced cauliflower",
+      "title": "Cauliflower Rice",
+      "amount": {
+        "qty": 2,
+        "unit": "bag (10 oz)",
+        "units": "bags (10 oz each)",
+        "what": "frozen riced cauliflower"
+      },
+      "liquid": [],
+      "liquid_text": "no liquid: the frozen cauliflower makes its own",
+      "steam": "about 15",
+      "source": "us_qsg"
+    },
+    {
+      "id": "gluten-free-pasta",
+      "name": "Gluten-free pasta",
+      "title": "Gluten-Free Pasta",
+      "amount": {
+        "qty": 8,
+        "unit": "oz",
+        "units": "oz",
+        "what": "gluten-free pasta"
+      },
+      "liquid": [
+        {
+          "qty": 3,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        },
+        {
+          "qty": 2,
+          "unit": "tbsp",
+          "units": "tbsp",
+          "what": "oil"
+        }
+      ],
+      "steam": "10–15",
+      "pasta": true,
+      "source": "uk_qsg"
+    },
+    {
+      "id": "instant-brown-rice",
+      "name": "Instant brown rice",
+      "title": "Brown Rice",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "instant brown rice",
+        "prep": "no need to rinse"
+      },
+      "liquid": [
+        {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        }
+      ],
+      "steam": "about 10",
+      "rice": true,
+      "source": "us_qsg"
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "title": "Lentils",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "lentils",
+        "prep": "rinsed"
+      },
+      "liquid": [
+        {
+          "qty": 1.75,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        }
+      ],
+      "source": "us_qsg"
+    },
+    {
+      "id": "pasta-alfredo",
+      "name": "Pasta with Alfredo sauce",
+      "title": "Alfredo Pasta",
+      "amount": {
+        "qty": 8,
+        "unit": "oz",
+        "units": "oz",
+        "what": "ziti or fettuccine"
+      },
+      "liquid": [
+        {
+          "qty": 1,
+          "unit": "jar (15 oz)",
+          "units": "jars (15 oz each)",
+          "what": "Alfredo sauce"
+        },
+        {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        }
+      ],
+      "steam": "about 10",
+      "pasta": true,
+      "source": "us_qsg"
+    },
+    {
+      "id": "pasta-blush",
+      "name": "Pasta with Blush sauce",
+      "title": "Pasta in Blush Sauce",
+      "amount": {
+        "qty": 8,
+        "unit": "oz",
+        "units": "oz",
+        "what": "pasta"
+      },
+      "liquid": [
+        {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "blush (tomato cream) sauce"
+        },
+        {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        }
+      ],
+      "steam": "10–15",
+      "pasta": true,
+      "estimate": "Uses the guide's amounts for pasta with tomato sauce.",
+      "source": "uk_qsg"
+    },
+    {
+      "id": "pasta-tomato",
+      "name": "Pasta with tomato sauce",
+      "title": "Pasta in Tomato Sauce",
+      "amount": {
+        "qty": 8,
+        "unit": "oz",
+        "units": "oz",
+        "what": "pasta"
+      },
+      "liquid": [
+        {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "pasta sauce"
+        },
+        {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        }
+      ],
+      "steam": "10–15",
+      "pasta": true,
+      "source": "uk_qsg"
+    },
+    {
+      "id": "plain-pasta",
+      "name": "Plain pasta",
+      "title": "Pasta",
+      "amount": {
+        "qty": 8,
+        "unit": "oz",
+        "units": "oz",
+        "what": "pasta"
+      },
+      "liquid": [
+        {
+          "qty": 3,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        },
+        {
+          "qty": 2,
+          "unit": "tbsp",
+          "units": "tbsp",
+          "what": "oil"
+        }
+      ],
+      "steam": "10–15",
+      "pasta": true,
+      "source": "uk_qsg"
+    },
+    {
+      "id": "quinoa",
+      "name": "Quinoa",
+      "title": "Quinoa",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "quinoa",
+        "prep": "rinsed"
+      },
+      "liquid": [
+        {
+          "qty": 1.5,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        }
+      ],
+      "steam": "about 10",
+      "source": "us_qsg"
+    },
+    {
+      "id": "risotto",
+      "name": "Risotto",
+      "title": "Risotto",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "Arborio rice"
+      },
+      "liquid": [
+        {
+          "qty": 4,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        }
+      ],
+      "source": "us_qsg"
+    },
+    {
+      "id": "white-rice",
+      "name": "White rice",
+      "title": "Rice",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "white rice",
+        "prep": "rinsed"
+      },
+      "liquid": [
+        {
+          "qty": 2,
+          "unit": "cup",
+          "units": "cups",
+          "what": "water or stock"
+        }
+      ],
+      "steam": "about 10",
+      "rice": true,
+      "source": "us_qsg"
+    }
+  ],
+  "proteins": [
+    {
+      "id": "pork-chops",
+      "name": "Boneless pork chops",
+      "title": "Pork Chops",
+      "amount": {
+        "qty": 4,
+        "unit": "boneless pork chop",
+        "units": "boneless pork chops",
+        "detail": "1 in thick or less, 5–6 oz each"
+      },
+      "temp_f": 375,
+      "done_f": 145,
+      "source": "us_qsg"
+    },
+    {
+      "id": "chicken-thighs-skin-on",
+      "name": "Boneless skin-on chicken thighs",
+      "title": "Chicken Thighs",
+      "amount": {
+        "qty": 4,
+        "unit": "boneless skin-on chicken thigh",
+        "units": "boneless skin-on chicken thighs",
+        "detail": "5–6 oz each"
+      },
+      "temp_f": 390,
+      "done_f": 165,
+      "source": "us_qsg"
+    },
+    {
+      "id": "chicken-thighs-skinless",
+      "name": "Boneless skinless chicken thighs",
+      "title": "Chicken Thighs",
+      "amount": {
+        "qty": 4,
+        "unit": "boneless skinless chicken thigh",
+        "units": "boneless skinless chicken thighs",
+        "detail": "4–8 oz each"
+      },
+      "temp_f": 390,
+      "done_f": 165,
+      "source": "sn_rec8174"
+    },
+    {
+      "id": "chicken-sausages",
+      "name": "Chicken sausages",
+      "title": "Chicken Sausages",
+      "amount": {
+        "qty": 4,
+        "unit": "chicken sausage",
+        "units": "chicken sausages"
+      },
+      "temp_f": 325,
+      "done_f": 165,
+      "source": "us_qsg"
+    },
+    {
+      "id": "cod",
+      "name": "Cod",
+      "title": "Cod",
+      "amount": {
+        "qty": 4,
+        "unit": "cod fillet",
+        "units": "cod fillets",
+        "detail": "about 6 oz each"
+      },
+      "temp_f": 350,
+      "done_f": 145,
+      "estimate": "Temperature from the guide's shrimp & salmon row.",
+      "source": "us_qsg"
+    },
+    {
+      "id": "falafel",
+      "name": "Falafel",
+      "title": "Falafel",
+      "amount": {
+        "qty": 12,
+        "unit": "falafel",
+        "units": "falafel",
+        "detail": "about 1 oz each"
+      },
+      "temp_f": 350,
+      "source": "us_qsg"
+    },
+    {
+      "id": "breaded-fish",
+      "name": "Frozen breaded fish fillets",
+      "title": "Crispy Fish",
+      "amount": {
+        "qty": 1,
+        "unit": "box (6 fillets)",
+        "units": "boxes (6 fillets each)",
+        "what": "frozen breaded fish fillets"
+      },
+      "temp_f": 375,
+      "done_f": 145,
+      "frozen": true,
+      "estimate": "Temperature from the guide's breaded chicken row; amount from the Air Fry chart.",
+      "source": "us_qsg"
+    },
+    {
+      "id": "fish-sticks",
+      "name": "Frozen fish sticks",
+      "title": "Fish Sticks",
+      "amount": {
+        "qty": 1,
+        "unit": "box (14.8 oz)",
+        "units": "boxes (14.8 oz each)",
+        "what": "frozen fish sticks"
+      },
+      "temp_f": 375,
+      "frozen": true,
+      "estimate": "Temperature from the guide's breaded chicken row; amount from the Air Fry chart.",
+      "source": "us_qsg"
+    },
+    {
+      "id": "burger-patties",
+      "name": "Hamburger patties",
+      "title": "Burgers",
+      "amount": {
+        "qty": 4,
+        "unit": "quarter-pound burger patty",
+        "units": "quarter-pound burger patties",
+        "detail": "80% lean"
+      },
+      "temp_f": 350,
+      "done_f": 160,
+      "estimate": "Temperature from the guide's steak tips & meatballs row; amount from the Air Fry chart.",
+      "source": "us_qsg"
+    },
+    {
+      "id": "italian-sausage",
+      "name": "Italian sausage",
+      "title": "Italian Sausage",
+      "amount": {
+        "qty": 6,
+        "unit": "Italian sausage",
+        "units": "Italian sausages"
+      },
+      "temp_f": 375,
+      "done_f": 160,
+      "source": "us_qsg"
+    },
+    {
+      "id": "jumbo-shrimp",
+      "name": "Jumbo shrimp",
+      "title": "Shrimp",
+      "amount": {
+        "qty": 24,
+        "unit": "jumbo shrimp",
+        "units": "jumbo shrimp",
+        "detail": "peeled, tails on"
+      },
+      "temp_f": 350,
+      "done_f": 145,
+      "source": "us_qsg"
+    },
+    {
+      "id": "meatballs",
+      "name": "Meatballs",
+      "title": "Meatballs",
+      "amount": {
+        "qty": 12,
+        "unit": "meatball",
+        "units": "meatballs",
+        "detail": "about 2 oz each, fresh or frozen"
+      },
+      "temp_f": 350,
+      "done_f": 165,
+      "source": "us_qsg"
+    },
+    {
+      "id": "plant-chicken",
+      "name": "Plant-based chicken substitute",
+      "title": "Plant-Based Chicken",
+      "amount": {
+        "qty": 1,
+        "unit": "package (10–12 oz)",
+        "units": "packages (10–12 oz each)",
+        "what": "plant-based chicken pieces"
+      },
+      "temp_f": 350,
+      "estimate": "Temperature from the guide's falafel & tofu row. Amount is a typical package.",
+      "source": "us_qsg"
+    },
+    {
+      "id": "plant-meatballs",
+      "name": "Plant-based meatballs",
+      "title": "Plant-Based Meatballs",
+      "amount": {
+        "qty": 12,
+        "unit": "plant-based meatball",
+        "units": "plant-based meatballs"
+      },
+      "temp_f": 350,
+      "source": "us_qsg"
+    },
+    {
+      "id": "plant-patties",
+      "name": "Plant-based patties",
+      "title": "Plant-Based Patties",
+      "amount": {
+        "qty": 4,
+        "unit": "plant-based patty",
+        "units": "plant-based patties"
+      },
+      "temp_f": 350,
+      "estimate": "Temperature from the guide's falafel & tofu row.",
+      "source": "us_qsg"
+    },
+    {
+      "id": "plant-sausages",
+      "name": "Plant-based sausages",
+      "title": "Plant-Based Sausages",
+      "amount": {
+        "qty": 6,
+        "unit": "plant-based sausage",
+        "units": "plant-based sausages"
+      },
+      "temp_f": 375,
+      "source": "us_qsg"
+    },
+    {
+      "id": "pork-sausages",
+      "name": "Pork sausages",
+      "title": "Pork Sausages",
+      "amount": {
+        "qty": 6,
+        "unit": "pork sausage",
+        "units": "pork sausages"
+      },
+      "temp_f": 375,
+      "done_f": 160,
+      "source": "us_qsg"
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon fillets",
+      "title": "Salmon",
+      "amount": {
+        "qty": 4,
+        "unit": "salmon fillet",
+        "units": "salmon fillets",
+        "detail": "about 6 oz each"
+      },
+      "temp_f": 350,
+      "done_f": 145,
+      "source": "us_qsg"
+    },
+    {
+      "id": "chicken-breast",
+      "name": "Skinless chicken breast",
+      "title": "Chicken",
+      "amount": {
+        "qty": 4,
+        "unit": "boneless skinless chicken breast",
+        "units": "boneless skinless chicken breasts",
+        "detail": "5–6 oz each, 1 1/2–2 in thick"
+      },
+      "temp_f": 390,
+      "done_f": 165,
+      "source": "us_qsg"
+    },
+    {
+      "id": "steak-strips",
+      "name": "Steak strips",
+      "title": "Steak",
+      "amount": {
+        "qty": 2,
+        "unit": "lb",
+        "units": "lb",
+        "what": "steak strips or tips",
+        "prep": "marinated"
+      },
+      "temp_f": 350,
+      "done_f": 145,
+      "source": "us_qsg"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu",
+      "title": "Tofu",
+      "amount": {
+        "qty": 1,
+        "unit": "package (16 oz)",
+        "units": "packages (16 oz each)",
+        "what": "firm tofu",
+        "prep": "cut in 1–2 inch cubes"
+      },
+      "temp_f": 350,
+      "source": "us_qsg"
+    }
+  ],
+  "seasonings": [
+    {
+      "id": "asian",
+      "name": "Asian-inspired seasoning",
+      "title": "Asian-Inspired",
+      "use": "1–2 tbsp Asian-inspired seasoning"
+    },
+    {
+      "id": "bbq",
+      "name": "BBQ seasoning",
+      "title": "BBQ",
+      "use": "1–2 tbsp BBQ seasoning"
+    },
+    {
+      "id": "buffalo",
+      "name": "Buffalo",
+      "title": "Buffalo",
+      "use": "2–3 tbsp buffalo sauce"
+    },
+    {
+      "id": "curry",
+      "name": "Curry",
+      "title": "Curry",
+      "use": "1–2 tbsp curry powder"
+    },
+    {
+      "id": "citrus",
+      "name": "Fresh citrus",
+      "title": "Citrus",
+      "use": "zest and juice of 1 lemon or lime"
+    },
+    {
+      "id": "greek",
+      "name": "Greek seasoning",
+      "title": "Greek",
+      "use": "1–2 tbsp Greek seasoning"
+    },
+    {
+      "id": "harissa",
+      "name": "Harissa",
+      "title": "Harissa",
+      "use": "1–2 tbsp harissa paste"
+    },
+    {
+      "id": "herbes-de-provence",
+      "name": "Herbs de Provence",
+      "title": "Provençal",
+      "use": "1–2 tbsp herbes de Provence"
+    },
+    {
+      "id": "italian",
+      "name": "Italian seasoning",
+      "title": "Italian",
+      "use": "1–2 tbsp Italian seasoning"
+    },
+    {
+      "id": "jerk",
+      "name": "Jerk seasoning",
+      "title": "Jerk",
+      "use": "1–2 tbsp jerk seasoning"
+    },
+    {
+      "id": "ranch",
+      "name": "Ranch",
+      "title": "Ranch",
+      "use": "1–2 tbsp ranch seasoning"
+    },
+    {
+      "id": "choice",
+      "name": "Seasoning of choice",
+      "title": "",
+      "use": "1–2 tbsp your favorite seasoning"
+    },
+    {
+      "id": "taco",
+      "name": "Taco or fajita seasoning",
+      "title": "Taco",
+      "use": "2 tbsp taco or fajita seasoning"
+    },
+    {
+      "id": "tikka-masala",
+      "name": "Tikka Masala",
+      "title": "Tikka Masala",
+      "use": "2 tbsp tikka masala paste"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric",
+      "title": "Turmeric",
+      "use": "1–2 tsp ground turmeric"
+    },
+    {
+      "id": "zaatar",
+      "name": "Zaatar",
+      "title": "Za’atar",
+      "use": "1–2 tbsp za’atar"
+    }
+  ],
+  "vegetables": [
+    {
+      "id": "asparagus",
+      "name": "Asparagus spears",
+      "title": "Asparagus",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "asparagus",
+        "prep": "cut in 2-inch pieces"
+      },
+      "place": "late",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "bell-pepper",
+      "name": "Bell pepper",
+      "title": "Peppers",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "bell pepper",
+        "prep": "diced"
+      },
+      "place": "base",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "title": "Broccoli",
+      "amount": {
+        "qty": 2,
+        "unit": "cup",
+        "units": "cups",
+        "what": "broccoli",
+        "prep": "in 2-inch florets"
+      },
+      "place": "late",
+      "source": "us_qsg"
+    },
+    {
+      "id": "brussels-sprouts",
+      "name": "Brussels sprouts",
+      "title": "Brussels Sprouts",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "Brussels sprouts",
+        "prep": "halved"
+      },
+      "place": "tray",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "black-beans",
+      "name": "Canned black beans",
+      "title": "Black Beans",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "canned black beans",
+        "prep": "drained"
+      },
+      "place": "base",
+      "source": "us_qsg"
+    },
+    {
+      "id": "garbanzo-beans",
+      "name": "Canned garbanzo beans",
+      "title": "Chickpeas",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "canned garbanzo beans",
+        "prep": "drained"
+      },
+      "place": "base",
+      "source": "us_qsg"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "title": "Carrots",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "carrots",
+        "prep": "cut in 1-inch pieces"
+      },
+      "place": "tray",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "title": "Cauliflower",
+      "amount": {
+        "qty": 2,
+        "unit": "cup",
+        "units": "cups",
+        "what": "cauliflower",
+        "prep": "in 2-inch florets"
+      },
+      "place": "late",
+      "source": "us_qsg"
+    },
+    {
+      "id": "cherry-tomatoes",
+      "name": "Cherry tomatoes",
+      "title": "Tomatoes",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "cherry tomatoes"
+      },
+      "place": "base",
+      "source": "us_qsg"
+    },
+    {
+      "id": "corn",
+      "name": "Corn kernels",
+      "title": "Corn",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "corn kernels",
+        "prep": "frozen or drained canned"
+      },
+      "place": "base",
+      "source": "us_qsg"
+    },
+    {
+      "id": "frozen-peas",
+      "name": "Frozen peas",
+      "title": "Peas",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "frozen peas"
+      },
+      "place": "base",
+      "frozen": true,
+      "source": "us_qsg"
+    },
+    {
+      "id": "green-beans",
+      "name": "Green beans",
+      "title": "Green Beans",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "green beans",
+        "prep": "trimmed"
+      },
+      "place": "late",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "mixed-veg",
+      "name": "Mixed vegetables",
+      "title": "Vegetables",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "frozen mixed vegetables"
+      },
+      "place": "base",
+      "frozen": true,
+      "source": "us_qsg"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "title": "Mushrooms",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "mushrooms",
+        "prep": "sliced"
+      },
+      "place": "base",
+      "source": "us_qsg"
+    },
+    {
+      "id": "parsnips",
+      "name": "Parsnips",
+      "title": "Parsnips",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "parsnips",
+        "prep": "cut in 1-inch pieces"
+      },
+      "place": "tray",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "red-onion",
+      "name": "Red onion",
+      "title": "Red Onion",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "red onion",
+        "prep": "cut in wedges"
+      },
+      "place": "tray",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "title": "Spinach",
+      "amount": {
+        "qty": 1,
+        "unit": "heaping cup",
+        "units": "heaping cups",
+        "what": "fresh spinach"
+      },
+      "place": "base",
+      "source": "us_qsg"
+    },
+    {
+      "id": "sweet-potato",
+      "name": "Sweet potato",
+      "title": "Sweet Potato",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "sweet potato",
+        "prep": "cut in 1-inch cubes"
+      },
+      "place": "tray",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "white-onion",
+      "name": "White onion",
+      "title": "Onion",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "white onion",
+        "prep": "diced"
+      },
+      "place": "base",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "title": "Zucchini",
+      "amount": {
+        "qty": 1,
+        "unit": "cup",
+        "units": "cups",
+        "what": "zucchini",
+        "prep": "cut in 1-inch pieces"
+      },
+      "place": "late",
+      "estimate": "The guide doesn't list an amount for this vegetable; 1 cup matches its other vegetables."
+    }
+  ],
+  "toppings": [
+    {
+      "id": "avocado",
+      "name": "Avocado"
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese"
+    },
+    {
+      "id": "seasoning-salts",
+      "name": "Flavored seasoning salts"
+    },
+    {
+      "id": "greens",
+      "name": "Fresh greens"
+    },
+    {
+      "id": "herbs",
+      "name": "Fresh herbs"
+    },
+    {
+      "id": "sliced-veg",
+      "name": "Fresh sliced vegetables"
+    },
+    {
+      "id": "greek-yogurt",
+      "name": "Greek yogurt"
+    },
+    {
+      "id": "guacamole",
+      "name": "Guacamole"
+    },
+    {
+      "id": "hot-sauce",
+      "name": "Hot sauce"
+    },
+    {
+      "id": "hummus",
+      "name": "Hummus"
+    },
+    {
+      "id": "pickled-veg",
+      "name": "Pickled vegetables"
+    },
+    {
+      "id": "salsa",
+      "name": "Salsa"
+    },
+    {
+      "id": "sour-cream",
+      "name": "Sour cream"
+    },
+    {
+      "id": "nuts-seeds",
+      "name": "Toasted nuts or seeds"
+    },
+    {
+      "id": "chips",
+      "name": "Tortilla or pita chips"
+    },
+    {
+      "id": "tzatziki",
+      "name": "Tzatziki"
+    },
+    {
+      "id": "vinaigrette",
+      "name": "Vinaigrette dressing"
+    }
+  ]
+}

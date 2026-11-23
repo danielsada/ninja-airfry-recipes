@@ -5,7 +5,7 @@ Cook times, temperatures, liquid amounts and a Speedi Meal builder for the Ninja
 I love my Ninja Speedi, but the quick start guide lives in a drawer and the recipe builder on Ninja's site is gone, so the numbers I cook with live here.
 
 - **Cook charts** (`/charts/`): every food from the quick start guide's Steam & Crisp, Air Fry, Steam and Dehydrate charts, plus the Steam & Bake recipes. Filter by function or type to search (`/`); the filter is kept in the URL.
-- **Speedi Meal builder** (`/builder/`): pick a base, a protein and vegetables and get the liquid, temperature, time and steps, for 3–4 or 1–2 servings. Every meal has a shareable link.
+- **Speedi Meal builder** (`/builder/`): a rebuild of Ninja Test Kitchen's retired [Speedi Recipe Builder](https://web.archive.org/web/20250906142114/https://ninjatestkitchen.com/speedi-recipe-builder/). Pick a base, protein, seasoning (up to 2), vegetables (up to 3) and toppings, and it writes the recipe: ingredients, liquid, temperature, time and steps, for 3–4 or 1–2 servings. Recipes have shareable links and can be saved in the browser.
 
 ## Running the project
 
@@ -41,6 +41,12 @@ Everything comes from one file, `data/speedi.json`:
 
 - `sources`: where the numbers come from (listed on the About page).
 - `modes`: one entry per function (`id`, `name`, `icon`, `note`, `items`). Each item has `name`, `category`, `amount`, `prep`, `oil`, `liquid`, `accessory`, `temp_f` (or `setting`), `time_min`, `time_max`, `time_unit` (`min` by default, `hr` for Dehydrate), `tips` and `source`. Leave out what doesn't apply.
-- `meals`: the Speedi Meal builder. `bases`, `proteins` and `vegetables` use structured amounts (`{qty, unit, units, what, detail, prep}`) so the builder can halve them for 1–2 servings. Bases list their `liquid` parts and `steam` time; proteins their `temp_f` and safe internal temperature (`done_f`, USDA); vegetables can be `frozen`, `delicate` (added to the tray for the last 5–7 minutes) or `base_only`. `examples` are presets.
+`data/builder.json` drives the Speedi Meal builder:
+
+- `steps`: the five pickers (`id`, `key` into this file, `title`, `limit`: 1 = one choice, 0 = any number, `icon` prefix).
+- `bases`, `proteins`, `seasonings`, `vegetables`, `toppings`: the original builder's options, in its order. Amounts are structured (`{qty, unit, units, what, detail, prep}`) so they can be halved. Bases list their `liquid` parts and `steam` time; proteins their `temp_f` and USDA `done_f`; vegetables a `place` (`base`, `tray` from the start, or `late`: on the tray for the last 5–7 minutes). Values the guide doesn't give carry an `estimate` explaining where they come from, and the recipe lists them.
+- `examples`: presets on the home page and in the builder.
+
+Ingredient icons are SVGs in `assets/speedi/icons/<icon prefix>-<id>.svg`, built into their own sprite that only the builder loads.
 
 The charts follow Ninja's US quick start guide for the Speedi (SF300 series). The plain-pasta, tomato-sauce and potato bases come from the UK guide, converted to US units. Values that couldn't be confirmed are left out rather than guessed.

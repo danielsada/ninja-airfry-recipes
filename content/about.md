@@ -4,13 +4,13 @@ description: Why this Ninja Speedi guide exists, where its numbers come from, an
 params:
   sayhi: true
 ---
-I love my [Ninja Speedi](https://www.ninjakitchen.com/), but the quick start guide lives in a drawer, the recipe builder on Ninja's site moved, and the times I actually cook with were scattered across notes. This site keeps them in one place: the cook charts for every function, the base and liquid amounts for Speedi Meals, and a small [builder](/builder/) that turns *base + protein + veg* into steps.
+I love my [Ninja Speedi](https://www.ninjakitchen.com/), but the quick start guide lives in a drawer, the recipe builder on Ninja's site is gone, and the times I actually cook with were scattered across notes. This site keeps them in one place: the cook charts for every function, the base and liquid amounts for Speedi Meals, and a [Speedi Meal builder](/builder/) that rebuilds Ninja's retired recipe builder: pick a base, protein, seasoning, vegetables and toppings and get the recipe.
 
 It's a side project of [danielsada.tech](https://danielsada.tech/), built with Hugo and the same theme, so you can hop between the two.
 
 ## Where the numbers come from
 
-The charts and the Speedi Meal tables follow Ninja's quick start guide for the Speedi (SF300 series, 6 qt). The plain-pasta, tomato-sauce and potato bases come from the UK edition, converted to US units, and the done temperatures are the USDA's. Values I couldn't confirm are left out rather than guessed.
+The charts and the Speedi Meal tables follow Ninja's quick start guide for the Speedi (SF300 series, 6 qt). The plain-pasta, tomato-sauce and potato bases come from the UK edition, converted to US units, and the done temperatures are the USDA's. The builder's ingredient options are the ones from Ninja's archived recipe builder; where the guide has no number for one of them, the recipe says so and explains the estimate.
 
 {{< sources >}}
 

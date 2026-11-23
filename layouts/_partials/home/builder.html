@@ -1,14 +1,13 @@
-{{- /* Home: Speedi Meal builder teaser with the example meals as presets. cfg: title. */ -}}
+{{- /* Home: Speedi Meal builder teaser with the builder's example meals as presets. cfg: title. */ -}}
 {{- $cfg := .cfg -}}
-{{- $m := hugo.Data.speedi.meals -}}
 {{- with site.GetPage "/builder" }}{{ $b := . }}
 <section class="card card--note" aria-labelledby="bld-h">
   <div class="card-h"><h2 id="bld-h">{{ $cfg.title | default .Title }}</h2></div>
-  <p>Base and liquid in the pot, protein on the Crisper Tray above it, one button. Pick what you have and get the liquid, time and steps.</p>
-  {{- with $m.examples }}
+  <p>Pick a base, a protein, seasoning, vegetables and toppings, and get a one-pot recipe: base and liquid in the pot, protein on the Crisper Tray above it.</p>
+  {{- with hugo.Data.builder.examples }}
   <ul>
     {{- range . }}
-    <li><a href="{{ $b.RelPermalink }}?{{ printf "base=%s&protein=%s&veg=%s" .base .protein (delimit (.veg | default slice) ",") | safeURL }}">{{ .name }}</a></li>
+    <li><a href="{{ $b.RelPermalink }}{{ partial "speedi/preset-url.html" . | safeURL }}">{{ .name }}</a></li>
     {{- end }}
   </ul>
   {{- end }}

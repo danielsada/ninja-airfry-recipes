@@ -1,0 +1,7 @@
+{{- /* Query string for a builder preset (data/builder.json "examples"): "?base=…&protein=…&seasoning=a,b…". Returns a string. */ -}}
+{{- $p := . -}}
+{{- $parts := slice -}}
+{{- range hugo.Data.builder.steps -}}
+  {{- with index $p .id }}{{ $parts = $parts | append (printf "%s=%s" $.id (delimit . ",")) }}{{ end -}}
+{{- end -}}
+{{- return printf "?%s" (delimit $parts "&") -}}
